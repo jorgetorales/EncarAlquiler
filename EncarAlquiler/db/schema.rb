@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150821234312) do
+ActiveRecord::Schema.define(version: 20150822002733) do
 
   create_table "locatarios", force: :cascade do |t|
     t.string   "nombre"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 20150821234312) do
     t.integer  "usuario_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "usuarios", force: :cascade do |t|
+    t.string   "usuario"
+    t.string   "contrase±a"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
