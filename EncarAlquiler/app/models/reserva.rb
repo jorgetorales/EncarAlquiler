@@ -1,5 +1,5 @@
 class Reserva < ActiveRecord::Base
-	balongs_to:habitacion
-	balongs_to:locatario
-	balongs_to:usuario
+	belongs_to:locatario
+	belongs_to:habitacion
+	has_one:tipo throught:habitacion
 end
