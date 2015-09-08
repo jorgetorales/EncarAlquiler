@@ -1,0 +1,33 @@
+<h1>Listing usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>CI</th>
+      <th>Telefono</th>
+      <th>Email</th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locatarios.each do |locatrio| %>
+      <tr>
+        <td><%= locatrio.nombre %></td>
+        <td><%= locatrio.apellido %></td>
+        <td><%= locatrio.ci %></td>
+        <td><%= locatrio.telefono %></td>
+        <td><%= locatrio.email %></td>
+        <td><%= link_to 'Show', locatario %></td>
+        <td><%= link_to 'Edit', edit_locatario_path(locatario) %></td>
+        <td><%= link_to 'Destroy', locatario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Locatario', new_locatario_path %>
