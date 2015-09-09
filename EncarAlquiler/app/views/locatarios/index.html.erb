@@ -13,13 +13,13 @@
   </thead>
 
   <tbody>
-    <% @locatarios.each do |locatrio| %>
+    <% @locatarios.each do |locatario| %>
       <tr>
-        <td><%= locatrio.nombre %></td>
-        <td><%= locatrio.apellido %></td>
-        <td><%= locatrio.ci %></td>
-        <td><%= locatrio.telefono %></td>
-        <td><%= locatrio.email %></td>
+        <td><%= locatario.nombre %></td>
+        <td><%= locatario.apellido %></td>
+        <td><%= locatario.ci %></td>
+        <td><%= locatario.telefono %></td>
+        <td><%= locatario.email %></td>
         <td><%= link_to 'Show', locatario %></td>
         <td><%= link_to 'Edit', edit_locatario_path(locatario) %></td>
         <td><%= link_to 'Destroy', locatario, method: :delete, data: { confirm: 'Are you sure?' } %></td>

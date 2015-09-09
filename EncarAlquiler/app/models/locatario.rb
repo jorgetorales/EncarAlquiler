@@ -1,6 +1,6 @@
 class Locatario < ActiveRecord::Base
-	has_many:reservas
-	has_many:habitaciones, throught :reservas
-	validates :nombre, :apellido, :ci, :telefono, presence :true
+	has_many :reservas
+	has_many :habitaciones, through: :reservas
+	validates :nombre, :apellido, :ci, :telefono, presence: :true
 	
 end 

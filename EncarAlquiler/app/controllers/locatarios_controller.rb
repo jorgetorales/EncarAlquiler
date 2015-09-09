@@ -1,4 +1,4 @@
-class LocatarioController < ApplicationController
+class LocatariosController < ApplicationController
 before_action :set_locatario, only: [:show, :edit, :update, :destroy]
 
   # GET /usuarios
