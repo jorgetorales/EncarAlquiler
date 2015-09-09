@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  get 'tipo/index'
-
-  get 'tipo/show'
-
-  get 'tipo/edit'
-
   resources :locatarios
   resources :tipos
   # The priority is based upon order of creation: first created -> highest priority.
