@@ -1,4 +1,4 @@
 class Usuario < ActiveRecord::Base
 	has_many :reserva
-	validates :nombre, :contrasena, presence :true
+	validates :nombre, :contrasena, presence: :true
 end
