@@ -1,4 +1,4 @@
 class Tipo < ActiveRecord::Base
 	has_many :habitaciones
-	validates :nombre, presence :true
+	validates :nombre, presence: :true
 end
