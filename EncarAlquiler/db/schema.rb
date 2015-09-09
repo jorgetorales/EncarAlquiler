@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20150901213014) do
 
   create_table "usuarios", force: :cascade do |t|
     t.string   "usuario"
-    t.string   "contrase±a"
+    t.string   "contrasena"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
