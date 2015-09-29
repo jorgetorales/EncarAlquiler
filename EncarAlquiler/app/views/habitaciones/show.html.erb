@@ -1,2 +1,19 @@
-<h1>Habitaciones#show</h1>
-<p>Find me in app/views/habitaciones/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @habitacion.numero %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @habitacion.tipo_id %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @habitacion.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_habitacion_path(@habitacion) %> |
+<%= link_to 'Back', habitaciones_path %>

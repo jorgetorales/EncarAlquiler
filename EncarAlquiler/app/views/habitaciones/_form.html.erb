@@ -1,2 +1,30 @@
-<h1>Habitaciones#_form</h1>
-<p>Find me in app/views/habitaciones/_form.html.erb</p>
+<%= form_for(@habitacion) do |f| %>
+  <% if @habitacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@habitacion.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+
+      <ul>
+      <% @habitacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :numero %><br>
+    <%= f.text_field :Numero %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_id %><br>
+    <%= f.text_field :Tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :Descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar", class: "btn btn-success"%>
+  </div>
+<% end %>
