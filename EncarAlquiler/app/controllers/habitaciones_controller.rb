@@ -67,9 +67,10 @@ before_action :set_habitacion, only: [:show, :edit, :update, :destroy]
       @habitacion = Habitacion.find(params[:id])
     end
 
+    # para que muestre los valores cargados
     # Never trust parameters from the scary internet, only allow the white list through.
     def habitacion_params
-      params.require(:habitacion).permit(:numero, :tipo_id, :descripcion)
+      params.require(:habitacion).permit(:numero, :tipo_id, :descripcion, :precio)
     end
 end
 
