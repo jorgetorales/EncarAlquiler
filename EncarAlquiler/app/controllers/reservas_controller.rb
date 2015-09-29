@@ -43,7 +43,7 @@ before_action :set_reserva, only: [:show, :edit, :update, :destroy]
     respond_to do |format|
       if @reserva.update(reserva_params)
         format.html { redirect_to @reserva, notice: 'Reserva was successfully updated.' }
-        format.json { render :show, status: :ok, location: @locatario }
+        format.json { render :show, status: :ok, location: @reserva }
       else
         format.html { render :edit }
         format.json { render json: @reserva.errors, status: :unprocessable_entity }
@@ -69,7 +69,7 @@ before_action :set_reserva, only: [:show, :edit, :update, :destroy]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reserva_params
-      params.require(:reserva).permit(:locatario, :fecha_inicio, :habitacion,)
+      params.require(:reserva).permit(:locatario, :fecha_inicio, :fecha_fin, :habitacion)
     end
 end
 

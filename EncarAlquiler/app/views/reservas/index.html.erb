@@ -2,9 +2,10 @@
 <table>
   <thead>
     <tr>
-      <th>Locatario</th>
-      <th>Fecha de Inicio</th>
-      <th>Habitacion</th>
+      <th>Locatario: </th>
+      <th>Fecha_Inicio: </th>
+      <th>Fecha_Fin: </th>
+      <th>Habitacion:</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
       <tr>
         <td><%= reserva.locatario %></td>
         <td><%= reserva.fecha_inicio %></td>
+        <td><%= reserva.fecha_fin %></td>
         <td><%= reserva.habitacion %></td>
         <td><%= link_to 'Show', reserva %></td>
         <td><%= link_to 'Edit', edit_reserva_path(locatario) %></td>
