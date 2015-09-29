@@ -1,0 +1,30 @@
+<h1>Reservas#index</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Locatario</th>
+      <th>Fecha de Inicio</th>
+      <th>Habitacion</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservas.each do |locatario| %>
+      <tr>
+        <td><%= reserva.locatario %></td>
+        <td><%= reserva.fecha_inicio %></td>
+        <td><%= reserva.habitacion %></td>
+        <td><%= link_to 'Show', reserva %></td>
+        <td><%= link_to 'Edit', edit_reserva_path(locatario) %></td>
+        <td><%= link_to 'Destroy', reserva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Reserva', new_reserva_path %>
+
+

@@ -1,0 +1,25 @@
+<h1>Reservas#show</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Locatario:</strong>
+  <%= @reserva.locastario %>
+</p>
+
+<p>
+  <strong>Fecha Inicio:</strong>
+  <%= @reserva.feha_inicio %>
+</p>
+
+<p>
+  <strong>Habitacion:</strong>
+  <%= @reserva.habitacion %>
+</p>
+
+
+<%= link_to 'Edit', edit_reserva_path(@reserva) %> |
+<%= link_to 'Back', reservas_path %>
+
+
+<p>Find me in app/views/reservas/show.html.erb</p>
