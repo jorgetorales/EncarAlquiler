@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
 
-  get 'habitaciones/index'
+  get 'reservas/new'
 
-  get 'habitaciones/edit'
+  get 'reservas/edit'
 
-  get 'habitaciones/new'
+  get 'reservas/index'
 
-  get 'habitaciones/show'
+  get 'reservas/_form'
 
   resources :habitaciones
   resources :locatarios
   resources :tipos
   resources :reservas
+  resources :habitaciones
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
