@@ -7,6 +7,8 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.plural /^(ox)$/i, '\1en'
 #   inflect.singular /^(ox)en/i, '\1'
  inflect.irregular 'habitacion', 'habitaciones'
+ inflect.irregular 'reserva_habitacion', 'reservas_habitaciones'
+
 #   inflect.uncountable %w( fish sheep )
 end
 

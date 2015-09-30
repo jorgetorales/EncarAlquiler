@@ -11,22 +11,22 @@
       </ul>
     </div>
   <% end %>
-
+<!--se toco la fecha de inicio porque estaba solamente fecha inicio-->
   <div class="field">
-    <%= f.label :locatario %><br>
-    <%= f.text_field :locatario %>
+    <%= f.label :locatario_id %><br>
+    <%= f.text_field :locatario_id %>
   </div>
   <div class="field">
-    <%= f.label :fecha_de_inicio %><br>
+    <%= f.label :fecha_inicio %><br>
     <%= f.text_field :fecha_inicio %>
   </div>
   <div class="field">
-    <%= f.label :fecha_de_inicio %><br>
+    <%= f.label :fecha_fin %><br>
     <%= f.text_field :fecha_fin %>
   </div>
   <div class="field">
-    <%= f.label :habitacion %><br>
-    <%= f.text_field :habitacion %>
+    <%= f.label :habitacion_id %><br>
+    <%= f.text_field :habitacion_id %>
   </div>
   <div class="actions">
     <%= f.submit "Guardar", class: "btn btn-success"%>

@@ -1,7 +1,7 @@
 class Reserva < ActiveRecord::Base
-	belongs_to :locatario
-	belongs_to :habitacion
-	has_one :tipo through: :habitacion
-	validates :locatario, :fecha_inicio, :habitacion, presence: :true
+	has_many :locatarios
+	has_many :reservas_habitaciones
+	has_many :tipos, through: :habitaciones
+	validates :locatario_id, :fecha_inicio, :habitacion_id, presence: :true
 
 end

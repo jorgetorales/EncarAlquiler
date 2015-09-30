@@ -28,7 +28,7 @@ before_action :set_reserva, only: [:show, :edit, :update, :destroy]
 
     respond_to do |format|
       if @reserva.save
-        format.html { redirect_to @reserva, notice: 'Reserva was successfully created.' }
+        format.html { redirect_to @reserva, notice: 'Las reservas fueron hechas correctamente.' }
         format.json { render :show, status: :created, location: @reserva }
       else
         format.html { render :new }
@@ -69,7 +69,7 @@ before_action :set_reserva, only: [:show, :edit, :update, :destroy]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reserva_params
-      params.require(:reserva).permit(:locatario, :fecha_inicio, :fecha_fin, :habitacion)
+      params.require(:reserva).permit(:locatario_id, :fecha_inicio, :fecha_fin, :habitacion_id)
     end
 end
 

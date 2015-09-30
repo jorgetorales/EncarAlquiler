@@ -3,22 +3,22 @@
   <thead>
     <tr>
       <th>Locatario: </th>
-      <th>Fecha_Inicio: </th>
-      <th>Fecha_Fin: </th>
+      <th>Fecha Inicio: </th>
+      <th>Fecha Fin: </th>
       <th>Habitacion:</th>
-      <th colspan="4"></th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @reservas.each do |locatario| %>
+    <% @reservas.each do |reserva| %>
       <tr>
-        <td><%= reserva.locatario %></td>
+        <td><%= reserva.locatario_id %></td>
         <td><%= reserva.fecha_inicio %></td>
         <td><%= reserva.fecha_fin %></td>
-        <td><%= reserva.habitacion %></td>
+        <td><%= reserva.habitacion_id %></td>
         <td><%= link_to 'Show', reserva %></td>
-        <td><%= link_to 'Edit', edit_reserva_path(locatario) %></td>
+        <td><%= link_to 'Edit', edit_reserva_path(reserva) %></td>
         <td><%= link_to 'Destroy', reserva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

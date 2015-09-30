@@ -1,5 +1,6 @@
 class Habitacion < ActiveRecord::Base
-	has_many :reservas 
+	#ver si es plural
+	has_many :reservas_habitaciones
 	belongs_to :tipo
 	has_many :clientes, through: :reservas
 	validates :numero, :tipo_id, presence: :true
