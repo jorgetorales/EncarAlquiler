@@ -11,68 +11,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929234555) do
+ActiveRecord::Schema.define(version: 20151219000652) do
 
   create_table "habitaciones", force: :cascade do |t|
-    t.integer  "numero"
-    t.integer  "tipo_id"
-    t.string   "descripcion"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "precio"
+    t.integer  "numero",      limit: 4
+    t.integer  "tipo_id",     limit: 4
+    t.string   "descripcion", limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "precio",      limit: 4
   end
 
   create_table "locatarios", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "apellido"
-    t.integer  "ci"
-    t.integer  "telefono"
-    t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "nombre",     limit: 255
+    t.string   "apellido",   limit: 255
+    t.integer  "ci",         limit: 4
+    t.integer  "telefono",   limit: 4
+    t.string   "email",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "reserva_habitaciones", force: :cascade do |t|
-    t.integer  "habitacion_id"
-    t.integer  "reserva_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "habitacion_id", limit: 4
+    t.integer  "reserva_id",    limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "reservas", force: :cascade do |t|
-    t.integer  "locatario_id"
-    t.integer  "habitacion_id"
-    t.integer  "usuario_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.string   "fecha_inicio"
-    t.string   "fecha_fin"
+    t.integer  "locatario_id",  limit: 4
+    t.integer  "habitacion_id", limit: 4
+    t.integer  "usuario_id",    limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "fecha_inicio",  limit: 255
+    t.string   "fecha_fin",     limit: 255
   end
 
   create_table "tipos", force: :cascade do |t|
-    t.string   "nombre"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "nombre",     limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "usuarios", force: :cascade do |t|
-    t.string   "usuario"
-    t.string   "contrasena"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
   end
 
-  add_index "usuarios", ["email"], name: "index_usuarios_on_email", unique: true
-  add_index "usuarios", ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true
+  add_index "usuarios", ["email"], name: "index_usuarios_on_email", unique: true, using: :btree
+  add_index "usuarios", ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true, using: :btree
 
 end
