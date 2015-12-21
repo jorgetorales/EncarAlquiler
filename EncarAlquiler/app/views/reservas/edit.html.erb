@@ -1,8 +1,9 @@
-<h1>Reservas#edit</h1>
-
 <%= render 'form' %>
 
-<%= link_to 'Show', @reserva %> |
-<%= link_to 'Back', reservas_path %>
-
+<div class="col-md-4">
+	<div class="actions">
+		<%= link_to '', @reserva, class: "glyphicon glyphicon-list-alt" %>
+		<%= link_to '', reservas_path, class: "glyphicon glyphicon-chevron-left" %>
+	</div>
+</div>
 

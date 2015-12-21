@@ -1,6 +1,8 @@
-<h1>Editing locatario</h1>
-
 <%= render 'form' %>
 
-<%= link_to 'Show', @locatario %> |
-<%= link_to 'Back', locatarios_path %>
+<div class="col-md-4">
+	<div class="actions">
+		<%= link_to '', @locatario, class: "glyphicon glyphicon-list-alt" %>
+		<%= link_to '', locatarios_path, class: "glyphicon glyphicon-chevron-left" %>
+	</div>
+</div>

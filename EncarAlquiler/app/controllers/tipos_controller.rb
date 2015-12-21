@@ -1,4 +1,5 @@
 class TiposController < ApplicationController
+  layout 'paginas'
  before_action :set_tipo, only: [:show, :edit, :update, :destroy]
 
   def index

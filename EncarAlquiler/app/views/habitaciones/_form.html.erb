@@ -1,3 +1,4 @@
+<h1 class="espacio">Editar Habitaciones</h1>
 <%= form_for(@habitacion) do |f| %>
   <% if @habitacion.errors.any? %>
     <div id="error_explanation">
@@ -11,24 +12,40 @@
     </div>
   <% end %>
 
-  
-  <div class="field">
-    <%= f.label :numero %><br>
-    <%= f.text_field :numero %>
-  </div>
-  <div class="field">
-    <%= f.label :tipo_id %><br>
-    <%= f.text_field :tipo_id %>
-  </div>
-  <div class="field">
-    <%= f.label :descripcion %><br>
-    <%= f.text_field :descripcion %>
-  </div>
-  <div class="field">
-    <%= f.label :precio %><br>
-    <%= f.text_field :precio %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Guardar", class: "btn btn-success"%>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="table-responsive espacio">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr class="success">
+            <th class="text-center">
+              <%= f.label :numero %><br>
+            </th>
+            <th class="text-center">
+              <%= f.label :tipo_id %><br>
+            </th>
+            <th class="text-center">
+              <%= f.label :descripcion %><br>
+            </th>
+            <th class="text-center">
+              <%= f.label :precio %><br>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td><%= f.text_field :numero %></td>
+              <td><%= f.text_field :tipo_id %></td>
+              <td><%= f.text_field :descripcion %></td>
+              <td><%= f.text_field :precio %></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Guardar", class: "btn btn-success btn-xs"%>
+    </div>
   </div>
 <% end %>
+

@@ -1,29 +1,35 @@
+
+<h1 class="espacio">Locatarios</h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @locatario.nombre %>
-</p>
+<div class="col-md-10 col-md-offset-1">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+            <thead>
+              <tr class="success">
+                <th class="text-center">Nombre</th>
+                <th class="text-center">Apellido</th>
+                <th class="text-center">CI:</th>
+                <th class="text-center">Telefono</th>
+                <th class="text-center">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td><%= @locatario.nombre %></td>
+                  <td><%= @locatario.apellido %></td>
+                  <td><%= @locatario.ci %></td>
+                  <td><%= @locatario.telefono %></td>
+                  <td><%= @locatario.email %></td>
+                </tr>
+            </tbody>
+    </table>
+  </div>
+</div>
 
-<p>
-  <strong>Apellido:</strong>
-  <%= @locatario.apellido %>
-</p>
-
-<p>
-  <strong>CI:</strong>
-  <%= @locatario.ci %>
-</p>
-
-<p>
-  <strong>Telefono:</strong>
-  <%= @locatario.telefono %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @locatario.email %>
-</p>
-
-<%= link_to 'Edit', edit_locatario_path(@locatario) %> |
-<%= link_to 'Back', locatarios_path %>
+<div class="col-md-4">
+  <div class="actions">
+      <%= link_to '', edit_locatario_path(@locatario), class: "glyphicon glyphicon-list-alt" %>
+      <%= link_to '', locatarios_path, class: "glyphicon glyphicon-chevron-left" %>
+  </div>
+</div>

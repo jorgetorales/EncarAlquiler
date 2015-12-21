@@ -1,4 +1,5 @@
 class LocatariosController < ApplicationController
+  layout 'paginas'
 before_action :set_locatario, only: [:show, :edit, :update, :destroy]
 
   # GET /usuarios
@@ -19,10 +20,24 @@ before_action :set_locatario, only: [:show, :edit, :update, :destroy]
 
   # GET /usuarios/1/edit
   def edit
+    mi_id = params[:id]
+    #muestra pagina de edit es en singular
+    @locatario = Locatario.find(mi_id)
+    #para saber donde imprimio
+    #puts "aquiiiiiiiiiiiiii"
+    puts params
   end
+
+  
 
   # POST /usuarios
   # POST /usuarios.json
+   #
+    #puts "aquiiiiiiiiiiiiii"
+    #puts params
+    #
+    #params = {locatario: {}}
+    #Locatario.create(params[:locatario])
   def create
     @locatario = Locatario.new(locatario_params)
 
@@ -72,4 +87,3 @@ before_action :set_locatario, only: [:show, :edit, :update, :destroy]
       params.require(:locatario).permit(:nombre, :apellido, :ci, :telefono, :email)
     end
 end
-

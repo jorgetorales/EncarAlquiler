@@ -1,4 +1,4 @@
-<h1>Reservas#_form</h1>
+<h1 class="espacio">Editar Reservas</h1>
 <%= form_for(@reserva) do |f| %>
   <% if @reserva.errors.any? %>
     <div id="error_explanation">
@@ -11,24 +11,42 @@
       </ul>
     </div>
   <% end %>
-<!--se toco la fecha de inicio porque estaba solamente fecha inicio-->
-  <div class="field">
-    <%= f.label :locatario_id %><br>
-    <%= f.text_field :locatario_id %>
-  </div>
-  <div class="field">
-    <%= f.label :fecha_inicio %><br>
-    <%= f.text_field :fecha_inicio %>
-  </div>
-  <div class="field">
-    <%= f.label :fecha_fin %><br>
-    <%= f.text_field :fecha_fin %>
-  </div>
-  <div class="field">
-    <%= f.label :habitacion_id %><br>
-    <%= f.text_field :habitacion_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Guardar", class: "btn btn-success"%>
+<!--se toco la fecha de inicio porque estaba solamente fecha fin-->
+<!--se agrego estructura de la tabla-->
+
+  <div class="col-md-10 col-md-offset-1">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="success">
+              <th class="text-center">
+                <%= f.label :locatario_id %>
+              </th>
+              <th class="text-center">
+                <%= f.label :fecha_inicio %><br>
+              </th>
+              <th class="text-center">
+                <%= f.label :fecha_fin %><br>
+              </th>
+              <th class="text-center">
+                <%= f.label :habitacion_id %><br>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+              <tr>
+                <td><%= f.text_field :locatario_id %></td>
+                <td><%= f.text_field :fecha_inicio %></td>
+                <td><%= f.text_field :fecha_fin %></td>
+                <td><%= f.text_field :habitacion_id %></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Guardar", class: "btn btn-success btn-xs"%>
+      </div>
   </div>
 <% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151219000652) do
+ActiveRecord::Schema.define(version: 20151220190858) do
 
   create_table "habitaciones", force: :cascade do |t|
     t.integer  "numero",      limit: 4

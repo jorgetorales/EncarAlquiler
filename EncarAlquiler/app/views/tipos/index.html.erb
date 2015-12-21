@@ -1,25 +1,39 @@
-<h1>Lista de Lipos</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-          <th colspan="2"></th>
-    </tr>
-  </thead>
+<div class="espacio">
+  <h1>Tipos</h1>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="success">
+              <th class="text-center">Nombre</th>
+              <th class="text-center">Acciones</th>       
+              <th>
+                  <button type="button" class="btn btn-default btn-xs">
+                    <%= link_to '+', new_tipo_path %>
+                  </button>
+              </th>
+            </tr>
+          </thead>
 
-  <tbody>
-    <% @tipos.each do |tipo| %>
-      <tr>
-        <td><%= tipo.nombre %></td>
-        <td><%= link_to 'Show', tipo %></td>
-        <td><%= link_to 'Edit', edit_tipo_path(tipo) %></td>
-        <td><%= link_to 'Destroy', tipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Nuevo Tipo', new_tipo_path %>
-
+          <tbody>
+            <% @tipos.each do |tipo| %>
+              <tr>
+                <td><%= tipo.nombre %></td>
+                <td>
+                  <button type="button" class="btn btn-default btn-xs">
+                    <%= link_to 'Ver', tipo %>
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs"> 
+                    <%= link_to 'Editar', edit_tipo_path(tipo) %> 
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs">
+                    <%= link_to 'Eliminar', tipo, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </button>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>

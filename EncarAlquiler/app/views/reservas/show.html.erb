@@ -1,30 +1,33 @@
-<h1>Reservas#show</h1>
+<h1 class="espacio">Locatarios</h1>
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Locatario:</strong>
-  <%= @reserva.locatario_id %>
-</p>
+<div class="col-md-10 col-md-offset-1">
+	<div class="table-responsive">
+	    <table class="table table-bordered table-hover">
+	      <thead>
+	        <tr class="success">
+	          <th class="text-center">Locatario</th>
+	          <th class="text-center">Fecha Inicio</th>
+	          <th class="text-center">Fecha Fin</th>
+	          <th class="text-center">Habitacion</th>
+	        </tr>
+	      </thead>
 
-<p>
-  <strong>Fecha Inicio:</strong>
-  <%= @reserva.fecha_inicio %>
-</p>
+	      <tbody>
+	          <tr>
+	            <td><%= @reserva.locatario_id %></td>
+	            <td><%= @reserva.fecha_inicio %></td>
+	            <td><%= @reserva.fecha_fin%></td>
+	            <td><%= @reserva.habitacion_id %></td>
+	          </tr>
+	      </tbody>
+	    </table>
+</div>
 
-<p>
-  <strong>Fecha Fin:</strong>
-  <%= @reserva.fecha_fin %>
-</p>
-
-<p>
-  <strong>Habitacion:</strong>
-  <%= @reserva.habitacion_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_reserva_path(@reserva) %> |
-<%= link_to 'Back', reservas_path %>
-
-
-<p>Find me in app/views/reservas/show.html.erb</p>
+<div class="col-md-4">
+	<div class="actions">
+			<%= link_to '', edit_reserva_path(@reserva), class: "glyphicon glyphicon-list-alt" %>
+			<%= link_to '', reservas_path, class: "glyphicon glyphicon-chevron-left" %>
+	</div>
+</div>

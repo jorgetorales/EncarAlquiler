@@ -1,4 +1,5 @@
 class ReservasController < ApplicationController
+  layout 'paginas'
 before_action :set_reserva, only: [:show, :edit, :update, :destroy]
 
   # GET /usuarios

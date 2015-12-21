@@ -1,4 +1,5 @@
 class HabitacionesController < ApplicationController
+  layout 'paginas'
 before_action :set_habitacion, only: [:show, :edit, :update, :destroy]
 
   # GET /usuarios

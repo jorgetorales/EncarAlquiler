@@ -11,14 +11,22 @@ Rails.application.routes.draw do
     get 'new' => 'usuarios/sessions#destroy', :as => :new_usuario_password_path
     
   end
+ 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'locatarios#index'
+  root 'principal#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  #get 'habitaciones/reservas' => 'habitaciones#index'
+  #get 'principal/index_2' => 'principal#index_2'
+  #get 'principal/index' => 'principal#index'
+  #get 'locatarios/index' => 'locatarios#index'
+  #get 'reservas/index' => 'reservas#index'
+  #get 'tipos/index' => 'tipos#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

@@ -1,33 +1,47 @@
-<h1>Listing Locatarios</h1>
+<div class="espacio">
+  <h1>Locatarios</h1>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="table-responsive espacio">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr class="success">
+            <th class="text-center">Nombre</th>
+            <th class="text-center">Apellido</th>
+            <th class="text-center">CI</th>
+            <th class="text-center">Telefono</th>
+            <th class="text-center">Email</th>
+            <th class="text-center">Acciones</th>        
+            <th>
+                <button type="button" class="btn btn-default btn-xs">
+                  <%= link_to '+', new_locatario_path %>
+                </button>
+            </th>
+          </tr>
+        </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>CI</th>
-      <th>Telefono</th>
-      <th>Email</th>
-      <th colspan="6"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @locatarios.each do |locatario| %>
-      <tr>
-        <td><%= locatario.nombre %></td>
-        <td><%= locatario.apellido %></td>
-        <td><%= locatario.ci %></td>
-        <td><%= locatario.telefono %></td>
-        <td><%= locatario.email %></td>
-        <td><%= link_to 'Show', locatario %></td>
-        <td><%= link_to 'Edit', edit_locatario_path(locatario) %></td>
-        <td><%= link_to 'Destroy', locatario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Locatario', new_locatario_path %>
+        <tbody>
+          <% @locatarios.each do |locatario| %>
+            <tr>
+              <td><%= locatario.nombre %></td>
+              <td><%= locatario.apellido %></td>
+              <td><%= locatario.ci %></td>
+              <td><%= locatario.telefono %></td>
+              <td><%= locatario.email %></td>
+              <td>
+                <button type="button" class="btn btn-default btn-xs">
+                  <%= link_to 'Ver', locatario %>
+                </button>
+                <button type="button" class="btn btn-default btn-xs"> 
+                  <%= link_to 'Editar', edit_locatario_path(locatario) %> 
+                </button>
+                <button type="button" class="btn btn-default btn-xs">
+                  <%= link_to 'Eliminar', locatario, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </button>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
