@@ -16,3 +16,8 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function () {
+	//Initialize Select2 Elements
+    $('select.select2').select2(
+    	{placeholder: "Selecionar", allowclear: true,});
+});

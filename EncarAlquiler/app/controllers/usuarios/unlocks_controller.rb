@@ -1,4 +1,5 @@
 class Usuarios::UnlocksController < Devise::UnlocksController
+   layout 'paginas'
   # GET /resource/unlock/new
   # def new
   #   super

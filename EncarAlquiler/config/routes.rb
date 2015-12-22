@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  
   resources :habitaciones
   resources :locatarios
   resources :tipos
   resources :reservas
   resources :principal
-
   devise_for :usuarios,  controllers: { sessions: "usuarios/sessions", registrations: "usuarios/registrations", passwords: "usuarios/passwords"  }, :path_names => {:sign_in => 'login', :sign_up => 'registro', :sign_out => 'logout'}
   as :usuario do
     get 'sign_in' => 'usuarios/sessions#new', :as => :new_usuario_session_path
@@ -13,15 +13,11 @@ Rails.application.routes.draw do
     get 'new' => 'usuarios/sessions#destroy', :as => :new_usuario_password_path
     
   end
-
-  
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'principal#index'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   #get 'habitaciones/reservas' => 'habitaciones#index'

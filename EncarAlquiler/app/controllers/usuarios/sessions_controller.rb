@@ -1,5 +1,6 @@
 class Usuarios::SessionsController < Devise::SessionsController
 # before_filter :configure_sign_in_params, only: [:create]
+ layout 'paginas'
 before_filter :login_required, :only => [ :edit, :update ]
 
   # GET /resource/sign_in
