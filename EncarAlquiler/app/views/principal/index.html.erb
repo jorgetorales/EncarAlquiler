@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Pagina Principal</title>
-	
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+	    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  		<%= javascript_include_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ 		<%= csrf_meta_tags %>
+
 
 </head>
 <body>
@@ -74,15 +74,13 @@
 	<div class="navbar navbar-default navbar-fixed-bottom">
 
 		<div class="container">
-			<p class="navbar-text pull-left">Conacto</p>
+			<p class="navbar-text pull-left">Contacto</p>
 			<!--<a class="navbar-btn btn-danger btn pull-right">Hola quetal</a>-->
 		</div>
 		
 	</div>
 
-	<script src="assets/js/jquery-latest.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.min.js"></script>
+	
 						
 
 </body>
