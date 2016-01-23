@@ -2,10 +2,8 @@
 
 one:
   locatario_id: 1
-  habitacion_id: 1
-  usuario_id: 1
+  fecha_reserva: MyString
 
 two:
   locatario_id: 1
-  habitacion_id: 1
-  usuario_id: 1
+  fecha_reserva: MyString

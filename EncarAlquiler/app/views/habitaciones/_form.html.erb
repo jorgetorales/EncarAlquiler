@@ -1,8 +1,7 @@
-<h1 class="espacio">Editar Habitaciones</h1>
 <%= form_for(@habitacion) do |f| %>
   <% if @habitacion.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@habitacion.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+      <h2><%= pluralize(@habitacion.errors.count, "error") %> prohibited this habitacion from being saved:</h2>
 
       <ul>
       <% @habitacion.errors.full_messages.each do |message| %>
@@ -12,7 +11,8 @@
     </div>
   <% end %>
 
-  <div class="col-md-10 col-md-offset-1">
+
+    <div class="col-md-10 col-md-offset-1">
     <div class="table-responsive espacio">
       <table class="table table-bordered table-hover">
         <thead>
@@ -29,6 +29,9 @@
             <th class="text-center">
               <%= f.label :precio %><br>
             </th>
+            <th class="text-center">
+              <%= f.label :estado %><br>
+            </th>
           </tr>
         </thead>
 
@@ -38,6 +41,7 @@
               <td> <%= f.collection_select(:tipo_id, Tipo.all, :id, :nombre, { prompt: true}, {:class=>'select2'}) %></td>
               <td><%= f.text_field :descripcion %></td>
               <td><%= f.text_field :precio %></td>
+              <td><%= f.text_field :estado %></td>
             </tr>
         </tbody>
       </table>
@@ -48,4 +52,3 @@
     </div>
   </div>
 <% end %>
-

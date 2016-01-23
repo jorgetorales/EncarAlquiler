@@ -1,33 +1,29 @@
-<h1 class="espacio">Habitaciones</h1>
 <p id="notice"><%= notice %></p>
 
-<div class="col-md-10 col-md-offset-1">
-	<div class="table-responsive">
-		<table class="table table-bordered table-hover">
-			<thead>
-				<tr class="success">
-					<th class="text-center">Numero</th>
-					<th class="text-center">Tipo</th>
-					<th class="text-center">Descripcion</th>
-					<th class="text-center">Precio</th>					
-				</tr>
-			</thead>
+<p>
+  <strong>Tipo:</strong>
+  <%= @habitacion.tipo_id %>
+</p>
 
-			<tbody>
-				<tr>
-					<td><%= @habitacion.numero %></td>
-					<td><%= @habitacion.tipo_id %></td>
-					<td><%= @habitacion.descripcion %></td>
-					<td><%= @habitacion.precio %></td>
-				</tr>
-			</tbody>
-		</table>		
-	</div>
-</div>
+<p>
+  <strong>Numero:</strong>
+  <%= @habitacion.numero %>
+</p>
 
-<div class="col-md-4">
-	<div class="actions">
-		<%= link_to '', edit_habitacion_path(@habitacion), class: "glyphicon glyphicon-list-alt" %>
-		<%= link_to '', habitaciones_path, class: "glyphicon glyphicon-chevron-left" %>
-	</div>
-</div>
+<p>
+  <strong>Descripcion:</strong>
+  <%= @habitacion.descripcion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @habitacion.estado %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @habitacion.precio %>
+</p>
+
+<%= link_to 'Edit', edit_habitacion_path(@habitacion) %> |
+<%= link_to 'Back', habitaciones_path %>

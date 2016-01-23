@@ -1,44 +1,29 @@
-<div class="espacio">
-<h1>Reservas</h1>
-<div class="col-md-10 col-md-offset-1">
-  <div class="table-responsive">
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr class="success">
-                <th class="text-center">Locatario</th>
-                <th class="text-center">Fecha Inicio</th>
-                <th class="text-center">Fecha Fin</th>
-                <th class="text-center">Habitación</th>
-                <th class="text-center">Acción</th>
-                <th>
-                  <button type="button" class="btn btn-default btn-xs">
-                    <%= link_to '+', new_reserva_path %>
-                  </button>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-          <%= @reservas.each do |reserva| %>
-              <tr>
-                  <td><%= reserva.locatario_id %></td>
-                  <td><%= reserva.fecha_inicio %></td>
-                  <td><%= reserva.fecha_fin %></td>
-                  <td><%= reserva.habitacion_id %></td>
-                  <td>
-                    <button type="button" class="btn btn-default btn-xs">
-                      <%= link_to 'Ver', reserva %>
-                    </button>
-                    <button type="button" class="btn btn-default btn-xs"> 
-                      <%= link_to 'Editar', edit_reserva_path(reserva) %> 
-                    </button>
-                    <button type="button" class="btn btn-default btn-xs">
-                      <%= link_to 'Eliminar', reserva, method: :delete, data: { confirm: 'Are you sure?' } %>
-                    </button>
-                  </td>
-              </tr>
-          <% end %>
-        </tbody>
-    </table>
-  </div>
-  </div>
-</div>
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Reservas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Locatario</th>
+      <th>Fecha reserva</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservas.each do |reserva| %>
+      <tr>
+        <td><%= reserva.locatario_id %></td>
+        <td><%= reserva.fecha_reserva %></td>
+        <td><%= link_to 'Show', reserva %></td>
+        <td><%= link_to 'Edit', edit_reserva_path(reserva) %></td>
+        <td><%= link_to 'Destroy', reserva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reserva', new_reserva_path %>

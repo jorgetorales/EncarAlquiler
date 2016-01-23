@@ -1,1 +1,1 @@
-json.extract! @habitacion, :id, :numero, :tipo_id, :descripcion, :precio :created_at, :updated_at
+json.extract! @habitacion, :id, :tipo_id, :numero, :descripcion, :estado, :precio, :created_at, :updated_at

@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   
   resources :habitaciones
+  resources :reservas_habitaciones
+  resources :reservas
   resources :locatarios
   resources :tipos
-  resources :reservas
   resources :principal
   devise_for :usuarios,  controllers: { sessions: "usuarios/sessions", registrations: "usuarios/registrations", passwords: "usuarios/passwords"  }, :path_names => {:sign_in => 'login', :sign_up => 'registro', :sign_out => 'logout'}
   as :usuario do

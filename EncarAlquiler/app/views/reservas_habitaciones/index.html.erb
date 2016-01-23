@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Reservas Habitaciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reserva</th>
+      <th>Habitacion</th>
+      <th>Fecha inicio</th>
+      <th>Fecha fin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservas_habitaciones.each do |reserva_habitacion| %>
+      <tr>
+        <td><%= reserva_habitacion.reserva_id %></td>
+        <td><%= reserva_habitacion.habitacion_id %></td>
+        <td><%= reserva_habitacion.fecha_inicio %></td>
+        <td><%= reserva_habitacion.fecha_fin %></td>
+        <td><%= link_to 'Show', reserva_habitacion %></td>
+        <td><%= link_to 'Edit', edit_reserva_habitacion_path(reserva_habitacion) %></td>
+        <td><%= link_to 'Destroy', reserva_habitacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reserva habitacion', new_reserva_habitacion_path %>

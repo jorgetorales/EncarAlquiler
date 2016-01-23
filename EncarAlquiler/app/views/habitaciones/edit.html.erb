@@ -1,10 +1,6 @@
+<h1>Editing Habitacion</h1>
+
 <%= render 'form' %>
 
-<div class="col-md-4">
-	<div class="actions">
-		<%= link_to '', @habitacion, class: "glyphicon glyphicon-list-alt" %>
-		<%= link_to '', habitacion_path, class: "glyphicon glyphicon-chevron-left" %>
-	</div>
-</div>
-
-
+<%= link_to 'Show', @habitacion %> |
+<%= link_to 'Back', habitaciones_path %>

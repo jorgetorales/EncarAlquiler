@@ -1,35 +1,35 @@
 class ReservasController < ApplicationController
   layout 'paginas'
-before_action :set_reserva, only: [:show, :edit, :update, :destroy]
+  before_action :set_reserva, only: [:show, :edit, :update, :destroy]
 
-  # GET /usuarios
-  # GET /usuarios.json
+  # GET /reservas
+  # GET /reservas.json
   def index
     @reservas = Reserva.all
   end
 
-  # GET /usuarios/1
-  # GET /usuarios/1.json
+  # GET /reservas/1
+  # GET /reservas/1.json
   def show
   end
 
-  # GET /usuarios/new
+  # GET /reservas/new
   def new
     @reserva = Reserva.new
   end
 
-  # GET /usuarios/1/edit
+  # GET /reservas/1/edit
   def edit
   end
 
-  # POST /usuarios
-  # POST /usuarios.json
+  # POST /reservas
+  # POST /reservas.json
   def create
     @reserva = Reserva.new(reserva_params)
 
     respond_to do |format|
       if @reserva.save
-        format.html { redirect_to @reserva, notice: 'Las reservas fueron hechas correctamente.' }
+        format.html { redirect_to @reserva, notice: 'Reserva was successfully created.' }
         format.json { render :show, status: :created, location: @reserva }
       else
         format.html { render :new }
@@ -38,8 +38,8 @@ before_action :set_reserva, only: [:show, :edit, :update, :destroy]
     end
   end
 
-  # PATCH/PUT /usuarios/1
-  # PATCH/PUT /usuarios/1.json
+  # PATCH/PUT /reservas/1
+  # PATCH/PUT /reservas/1.json
   def update
     respond_to do |format|
       if @reserva.update(reserva_params)
@@ -52,12 +52,12 @@ before_action :set_reserva, only: [:show, :edit, :update, :destroy]
     end
   end
 
-  # DELETE /usuarios/1
-  # DELETE /usuarios/1.json
+  # DELETE /reservas/1
+  # DELETE /reservas/1.json
   def destroy
     @reserva.destroy
     respond_to do |format|
-      format.html { redirect_to reservas_url, notice: 'La reserva a sido destruido.' }
+      format.html { redirect_to reservas_url, notice: 'Reserva was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -70,7 +70,6 @@ before_action :set_reserva, only: [:show, :edit, :update, :destroy]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reserva_params
-      params.require(:reserva).permit(:locatario_id, :fecha_inicio, :fecha_fin, :habitacion_id)
+      params.require(:reserva).permit(:locatario_id, :fecha_reserva)
     end
 end
-

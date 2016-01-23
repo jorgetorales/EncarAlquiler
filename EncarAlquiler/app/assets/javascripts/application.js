@@ -15,9 +15,15 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require nested_form_fields
 //= require_tree .
 $(document).ready(function () {
+	$('.datepicker').keydown(function() {
+		//code to not allow any changes to be made to input field
+		return true;
+	});
 	//Initialize Select2 Elements
     $('select.select2').select2(
     	{placeholder: "Selecionar", allowclear: true,});
+    $('.datepicker').datepicker();
 });

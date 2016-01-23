@@ -1,10 +1,5 @@
-
-<div class="col-md-10 col-md-offset-1">
-  <p id="notice"><%= notice %></p>
-  <h1>Lista de Habitaciones</h1>
-</div>
-
-
+<div class="espacio">
+<h1>Habitaciones</h1>
 <div class="col-md-10 col-md-offset-1">
   <div class="table-responsive">
     <table class="table table-bordered table-hover">
@@ -14,7 +9,6 @@
           <th class="text-center">Tipo</th>
           <th class="text-center">Descripcion</th>
           <th class="text-center">Precio</th>
-          <th class="text-center">Estado</th>
           <th class="text-center">Acciones</th>       
           <th>
               <button type="button" class="btn btn-default btn-xs">
@@ -31,7 +25,6 @@
             <td><%= habitacion.tipo_id %></td>
             <td><%= habitacion.descripcion %></td>
             <td><%= habitacion.precio %></td>
-            <td><%= habitacion.estado %></td>
             <td>
               <button type="button" class="btn btn-default btn-xs">
                 <%= link_to 'Ver', habitacion %>
@@ -49,3 +42,4 @@
     </table>
   </div>
   </div>
+</div>

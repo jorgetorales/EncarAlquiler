@@ -1,33 +1,14 @@
-<h1 class="espacio">Reservas</h1>
-
 <p id="notice"><%= notice %></p>
 
-<div class="col-md-10 col-md-offset-1">
-	<div class="table-responsive">
-	    <table class="table table-bordered table-hover">
-	      <thead>
-	        <tr class="success">
-	          <th class="text-center">Locatario</th>
-	          <th class="text-center">Fecha Inicio</th>
-	          <th class="text-center">Fecha Fin</th>
-	          <th class="text-center">Habitacion</th>
-	        </tr>
-	      </thead>
+<p>
+  <strong>Locatario:</strong>
+  <%= @reserva.locatario_id %>
+</p>
 
-	      <tbody>
-	          <tr>
-	            <td><%= @reserva.locatario_id %></td>
-	            <td><%= @reserva.fecha_inicio %></td>
-	            <td><%= @reserva.fecha_fin%></td>
-	            <td><%= @reserva.habitacion_id %></td>
-	          </tr>
-	      </tbody>
-	    </table>
-</div>
+<p>
+  <strong>Fecha reserva:</strong>
+  <%= @reserva.fecha_reserva %>
+</p>
 
-<div class="col-md-4">
-	<div class="actions">
-			<%= link_to '', edit_reserva_path(@reserva), class: "glyphicon glyphicon-list-alt" %>
-			<%= link_to '', reservas_path, class: "glyphicon glyphicon-chevron-left" %>
-	</div>
-</div>
+<%= link_to 'Edit', edit_reserva_path(@reserva) %> |
+<%= link_to 'Back', reservas_path %>

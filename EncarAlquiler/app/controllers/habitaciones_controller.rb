@@ -1,29 +1,29 @@
 class HabitacionesController < ApplicationController
   layout 'paginas'
-before_action :set_habitacion, only: [:show, :edit, :update, :destroy]
+  before_action :set_habitacion, only: [:show, :edit, :update, :destroy]
 
-  # GET /usuarios
-  # GET /usuarios.json
+  # GET /habitaciones
+  # GET /habitaciones.json
   def index
     @habitaciones = Habitacion.all
   end
 
-  # GET /usuarios/1
-  # GET /usuarios/1.json
+  # GET /habitaciones/1
+  # GET /habitaciones/1.json
   def show
   end
 
-  # GET /usuarios/new/no plural
+  # GET /habitaciones/new
   def new
     @habitacion = Habitacion.new
   end
 
-  # GET /usuarios/1/edit
+  # GET /habitaciones/1/edit
   def edit
   end
 
-  # POST /usuarios
-  # POST /usuarios.json/no plural
+  # POST /habitaciones
+  # POST /habitaciones.json
   def create
     @habitacion = Habitacion.new(habitacion_params)
 
@@ -38,8 +38,8 @@ before_action :set_habitacion, only: [:show, :edit, :update, :destroy]
     end
   end
 
-  # PATCH/PUT /usuarios/1
-  # PATCH/PUT /usuarios/1.json
+  # PATCH/PUT /habitaciones/1
+  # PATCH/PUT /habitaciones/1.json
   def update
     respond_to do |format|
       if @habitacion.update(habitacion_params)
@@ -52,8 +52,8 @@ before_action :set_habitacion, only: [:show, :edit, :update, :destroy]
     end
   end
 
-  # DELETE /usuarios/1
-  # DELETE /usuarios/1.json
+  # DELETE /habitaciones/1
+  # DELETE /habitaciones/1.json
   def destroy
     @habitacion.destroy
     respond_to do |format|
@@ -68,10 +68,8 @@ before_action :set_habitacion, only: [:show, :edit, :update, :destroy]
       @habitacion = Habitacion.find(params[:id])
     end
 
-    # para que muestre los valores cargados
     # Never trust parameters from the scary internet, only allow the white list through.
     def habitacion_params
-      params.require(:habitacion).permit(:numero, :tipo_id, :descripcion, :precio)
+      params.require(:habitacion).permit(:tipo_id, :numero, :descripcion, :estado, :precio)
     end
 end
-

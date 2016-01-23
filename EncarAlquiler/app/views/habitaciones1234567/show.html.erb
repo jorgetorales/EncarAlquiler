@@ -1,0 +1,33 @@
+<h1 class="espacio">Habitaciones</h1>
+<p id="notice"><%= notice %></p>
+
+<div class="col-md-10 col-md-offset-1">
+	<div class="table-responsive">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr class="success">
+					<th class="text-center">Numero</th>
+					<th class="text-center">Tipo</th>
+					<th class="text-center">Descripcion</th>
+					<th class="text-center">Precio</th>					
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><%= @habitacion.numero %></td>
+					<td><%= @habitacion.tipo_id %></td>
+					<td><%= @habitacion.descripcion %></td>
+					<td><%= @habitacion.precio %></td>
+				</tr>
+			</tbody>
+		</table>		
+	</div>
+</div>
+
+<div class="col-md-4">
+	<div class="actions">
+		<%= link_to '', edit_habitacion_path(@habitacion), class: "glyphicon glyphicon-list-alt" %>
+		<%= link_to '', habitaciones_path, class: "glyphicon glyphicon-chevron-left" %>
+	</div>
+</div>
