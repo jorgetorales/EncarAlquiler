@@ -12,9 +12,9 @@
             <th class="text-center">Email</th>
             <th class="text-center">Acciones</th>        
             <th>
-                <button type="button" class="btn btn-default btn-xs">
-                  <%= link_to '+', new_locatario_path %>
-                </button>
+                
+                  <%= link_to  glyph(:plus_sign), new_locatario_path, class: 'btn btn-default btn-xs' %>
+                
             </th>
           </tr>
         </thead>
@@ -28,15 +28,14 @@
               <td><%= locatario.telefono %></td>
               <td><%= locatario.email %></td>
               <td>
-                <button type="button" class="btn btn-default btn-xs">
-                  <%= link_to 'Ver', locatario %>
-                </button>
-                <button type="button" class="btn btn-default btn-xs"> 
-                  <%= link_to 'Editar', edit_locatario_path(locatario) %> 
-                </button>
-                <button type="button" class="btn btn-default btn-xs">
-                  <%= link_to 'Eliminar', locatario, method: :delete, data: { confirm: 'Are you sure?' } %>
-                </button>
+                
+                  <%= link_to  'Ver', locatario, class: 'btn btn-default btn-xs' %>
+                
+                
+                  <%= link_to 'Editar', edit_locatario_path(locatario), class: 'btn btn-default btn-xs' %> 
+                
+                  <%= link_to 'Eliminar', locatario, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-xs'  %>
+              
               </td>
             </tr>
           <% end %>
