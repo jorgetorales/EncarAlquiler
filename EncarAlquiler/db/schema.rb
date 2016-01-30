@@ -11,16 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222004238) do
+ActiveRecord::Schema.define(version: 20160123201035) do
 
   create_table "habitaciones", force: :cascade do |t|
-    t.integer  "numero",      limit: 4
     t.integer  "tipo_id",     limit: 4
+    t.integer  "numero",      limit: 4
     t.string   "descripcion", limit: 255
+    t.string   "estado",      limit: 255
+    t.integer  "precio",      limit: 4
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
-    t.integer  "precio",      limit: 4
   end
+
+  add_index "habitaciones", ["tipo_id"], name: "habitaciones_tipo_id_fk", using: :btree
 
   create_table "locatarios", force: :cascade do |t|
     t.string   "nombre",     limit: 255
@@ -32,22 +35,26 @@ ActiveRecord::Schema.define(version: 20151222004238) do
     t.datetime "updated_at",             null: false
   end
 
-  create_table "reserva_habitaciones", force: :cascade do |t|
-    t.integer  "habitacion_id", limit: 4
-    t.integer  "reserva_id",    limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-  end
-
   create_table "reservas", force: :cascade do |t|
     t.integer  "locatario_id",  limit: 4
-    t.integer  "habitacion_id", limit: 4
-    t.integer  "usuario_id",    limit: 4
+    t.string   "fecha_reserva", limit: 255
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  add_index "reservas", ["locatario_id"], name: "reservas_locatario_id_fk", using: :btree
+
+  create_table "reservas_habitaciones", force: :cascade do |t|
+    t.integer  "reserva_id",    limit: 4
+    t.integer  "habitacion_id", limit: 4
     t.string   "fecha_inicio",  limit: 255
     t.string   "fecha_fin",     limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
+
+  add_index "reservas_habitaciones", ["habitacion_id"], name: "reservas_habitaciones_habitacion_id_fk", using: :btree
+  add_index "reservas_habitaciones", ["reserva_id"], name: "reservas_habitaciones_reserva_id_fk", using: :btree
 
   create_table "tipos", force: :cascade do |t|
     t.string   "nombre",     limit: 255
@@ -73,4 +80,3 @@ ActiveRecord::Schema.define(version: 20151222004238) do
   add_index "usuarios", ["email"], name: "index_usuarios_on_email", unique: true, using: :btree
   add_index "usuarios", ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true, using: :btree
 
-end

@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Reservas</h1>
+<h1>Reservas Realizadas</h1>
 
 <table>
   <thead>
     <tr>
       <th>Locatario</th>
+      <th>   </th>
       <th>Fecha reserva</th>
       <th colspan="3"></th>
     </tr>
@@ -15,10 +16,11 @@
     <% @reservas.each do |reserva| %>
       <tr>
         <td><%= reserva.locatario_id %></td>
+        <th>   </th>
         <td><%= reserva.fecha_reserva %></td>
-        <td><%= link_to 'Show', reserva %></td>
-        <td><%= link_to 'Edit', edit_reserva_path(reserva) %></td>
-        <td><%= link_to 'Destroy', reserva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver reserva', reserva, class: 'btn btn-default btn-xs' %></td>
+        <td><%= link_to 'Editar Reserva', edit_reserva_path(reserva), class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Eliminar Reserva', reserva, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs'  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Reserva', new_reserva_path %>
+<%= link_to 'Nueva Reserva', new_reserva_path, class: 'btn btn-default btn-xs' %>

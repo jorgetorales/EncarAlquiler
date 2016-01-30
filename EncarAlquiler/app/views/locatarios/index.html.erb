@@ -1,8 +1,8 @@
 <div class="espacio">
   <h1>Locatarios</h1>
-  <div class="col-md-10 col-md-offset-1">
-    <div class="table-responsive espacio">
-      <table class="table table-bordered table-hover">
+  
+    <div class="table">
+      <table class="table table-striped">
         <thead>
           <tr class="success">
             <th class="text-center">Nombre</th>
@@ -32,9 +32,9 @@
                   <%= link_to  'Ver', locatario, class: 'btn btn-default btn-xs' %>
                 
                 
-                  <%= link_to 'Editar', edit_locatario_path(locatario), class: 'btn btn-default btn-xs' %> 
+                  <%= link_to 'Editar', edit_locatario_path(locatario), class: 'btn btn-primary btn-xs' %> 
                 
-                  <%= link_to 'Eliminar', locatario, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-xs'  %>
+                  <%= link_to 'Eliminar', locatario, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs'  %>
               
               </td>
             </tr>
