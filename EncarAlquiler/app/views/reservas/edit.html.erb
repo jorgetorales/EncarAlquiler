@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Mostrar Reservas', @reserva, class: 'btn btn-default btn-xs'  %> |
-<%= link_to 'Volver atras', reservas_path, class: 'btn btn-default btn-xs'  %>
+<%= link_to glyph(:remove), @reserva, class: 'btn btn-default btn-sm'  %>
+<%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-primary btn-sm'  %>

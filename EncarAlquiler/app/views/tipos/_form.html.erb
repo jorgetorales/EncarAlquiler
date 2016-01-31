@@ -1,8 +1,7 @@
-<h1 class="espacio">Editar Tipos</h1>
 <%= form_for(@tipo) do |f| %>
   <% if @tipo.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@tipo.errors.count, "error") %> prohibited this tipo from being saved:</h2>
+      <h2><%= pluralize(@tipo.errors.count, "error") %> Complete los datos antes de guardar:</h2>
 
       <ul>
       <% @tipo.errors.full_messages.each do |message| %>
@@ -30,7 +29,9 @@
     </div>
   
     <div class="actions">
-      <%= f.submit "Guardar", class: "btn btn-success btn-xs" %>
+      <%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
+                  <span class="glyphicon glyphicon-floppy-disk"></span>
+                <% end %>
     </div>
   </div>
 <% end %>

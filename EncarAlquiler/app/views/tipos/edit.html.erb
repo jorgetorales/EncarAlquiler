@@ -2,7 +2,7 @@
 
 <div class="col-md-6 col-md-offset-3">
 	<div class="actions">
-		<%= link_to '', @tipo, class: "glyphicon glyphicon-list-alt" %> 
-		<%= link_to '', tipos_path, class: "glyphicon glyphicon-chevron-left" %>
+		<%= link_to glyph(:remove), @tipo,  class: 'btn btn-default btn-sm' %> 
+		<%= link_to glyph(:arrow_left), tipos_path,  class: 'btn btn-primary btn-sm' %>
 	</div>
 </div>

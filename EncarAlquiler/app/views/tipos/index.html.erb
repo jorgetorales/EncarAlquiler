@@ -9,7 +9,7 @@
               <th class="text-center">Acciones</th>       
               <th>
                 
-                    <%= link_to '+', new_tipo_path, class: 'btn btn-default btn-xs' %>
+                    <%= link_to glyph(:plus), new_tipo_path, class: 'btn btn-primary btn-sm' %>
                 
               </th>
             </tr>
@@ -17,18 +17,14 @@
 
           <tbody>
             <% @tipos.each do |tipo| %>
-              <tr>
+              <tr class="text-center">
                 <td><%= tipo.nombre %></td>
                 <td>
-                  <button type="button" class="btn btn-default btn-xs">
-                    <%= link_to 'Ver', tipo %>
-                  </button>
-                  <button type="button" class="btn btn-default btn-xs"> 
-                    <%= link_to 'Editar', edit_tipo_path(tipo) %> 
-                  </button>
-                  <button type="button" class="btn btn-default btn-xs">
-                    <%= link_to 'Eliminar', tipo, method: :delete, data: { confirm: 'Are you sure?' } %>
-                  </button>
+                  
+                <%= link_to glyph(:eye_open), tipo, class: 'btn btn-info btn-sm' %>
+                <%= link_to glyph(:pencil), edit_tipo_path(tipo),  class: 'btn btn-warning btn-sm' %>
+                <%= link_to glyph(:trash), tipo, class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: 'Esta seguro?' } %>
+               
                 </td>
               </tr>
             <% end %>

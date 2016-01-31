@@ -10,5 +10,5 @@
   <%= @reserva.fecha_reserva %>
 </p>
 
-<%= link_to 'Editar Reserva', edit_reserva_path(@reserva), class: 'btn btn-default btn-xs' %> |
-<%= link_to 'Volver Atras', reservas_path, class: 'btn btn-default btn-xs' %>
+<%= link_to glyph(:pencil), edit_reserva_path(@reserva), class: 'btn btn-warning btn-sm' %> |
+<%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-primary btn-sm' %>

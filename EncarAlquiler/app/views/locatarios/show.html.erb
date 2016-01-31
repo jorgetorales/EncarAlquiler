@@ -28,7 +28,7 @@
 
 <div class="col-md-4">
   <div class="actions">
-      <%= link_to '', edit_locatario_path(@locatario), class: "glyphicon glyphicon-list-alt" %>
-      <%= link_to '', locatarios_path, class: "glyphicon glyphicon-chevron-left" %>
+      <%= link_to glyph(:pencil), edit_locatario_path(@locatario), class: 'btn btn-warning btn-sm' %>
+      <%= link_to glyph(:arrow_left), locatarios_path,  class: 'btn btn-primary btn-sm' %>
   </div>
 </div>

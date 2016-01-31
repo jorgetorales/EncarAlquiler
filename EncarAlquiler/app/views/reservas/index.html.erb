@@ -18,9 +18,9 @@
         <td><%= reserva.locatario_id %></td>
         <th>   </th>
         <td><%= reserva.fecha_reserva %></td>
-        <td><%= link_to 'Ver reserva', reserva, class: 'btn btn-default btn-xs' %></td>
-        <td><%= link_to 'Editar Reserva', edit_reserva_path(reserva), class: 'btn btn-primary btn-xs' %></td>
-        <td><%= link_to 'Eliminar Reserva', reserva, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs'  %></td>
+        <td><%= link_to glyph(:eye_open), reserva, class: 'btn btn-info btn-sm' %></td>
+        <td><%= link_to glyph(:pencil), edit_reserva_path(reserva), class: 'btn btn-warning btn-sm' %></td>
+        <td><%= link_to glyph(:trash), reserva, method: :delete, data: { confirm: 'Estas seguro?' }, class: 'btn btn-danger btn-sm'  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'Nueva Reserva', new_reserva_path, class: 'btn btn-default btn-xs' %>
+<%= link_to glyph(:plus), new_reserva_path, class: 'btn btn-primary btn-sm' %>

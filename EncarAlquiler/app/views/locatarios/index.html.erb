@@ -13,7 +13,7 @@
             <th class="text-center">Acciones</th>        
             <th>
                 
-                  <%= link_to  glyph(:plus_sign), new_locatario_path, class: 'btn btn-default btn-xs' %>
+                  <%= link_to  glyph(:plus), new_locatario_path, class: 'btn btn-primary btn-sm' %>
                 
             </th>
           </tr>
@@ -21,7 +21,7 @@
 
         <tbody>
           <% @locatarios.each do |locatario| %>
-            <tr>
+            <tr class="text-center">
               <td><%= locatario.nombre %></td>
               <td><%= locatario.apellido %></td>
               <td><%= locatario.ci %></td>
@@ -29,12 +29,12 @@
               <td><%= locatario.email %></td>
               <td>
                 
-                  <%= link_to  'Ver', locatario, class: 'btn btn-default btn-xs' %>
+                  <%= link_to glyph(:eye_open), locatario, class: 'btn btn-info btn-sm' %>
                 
                 
-                  <%= link_to 'Editar', edit_locatario_path(locatario), class: 'btn btn-primary btn-xs' %> 
+                  <%= link_to glyph(:pencil), edit_locatario_path(locatario), class: 'btn btn-warning btn-sm' %> 
                 
-                  <%= link_to 'Eliminar', locatario, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs'  %>
+                  <%= link_to glyph(:trash), locatario, method: :delete, data: { confirm: 'Estas seguro?' }, class: 'btn btn-danger btn-sm'  %>
               
               </td>
             </tr>
