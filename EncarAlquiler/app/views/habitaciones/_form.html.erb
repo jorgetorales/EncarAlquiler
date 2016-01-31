@@ -2,7 +2,6 @@
   <% if @habitacion.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@habitacion.errors.count, "error") %> Complete los datos antes de guardar:</h2>
-
       <ul>
       <% @habitacion.errors.full_messages.each do |message| %>
         <li><%= message %></li>
