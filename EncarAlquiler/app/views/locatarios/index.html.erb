@@ -1,19 +1,22 @@
-<div class="espacio">
-  <h1>Locatarios</h1>
+<div class="container">
+  <h1 class="text-center text-uppercase">
+    Locatarios
+    <th>
+      <%= link_to  glyph(:plus), new_locatario_path, class: 'btn btn-primary btn-sm' %>
+    </th>
+  </h1>
   
     <div class="table">
       <table class="table table-striped">
         <thead>
-          <tr class="success">
+          <tr class="info">
             <th class="text-center">Nombre</th>
             <th class="text-center">Apellido</th>
             <th class="text-center">CI</th>
             <th class="text-center">Telefono</th>
             <th class="text-center">Email</th>
             <th class="text-center">Acciones</th>        
-            <th>   
-                  <%= link_to  glyph(:plus), new_locatario_path, class: 'btn btn-primary btn-sm' %>
-            </th>
+            
           </tr>
         </thead>
 

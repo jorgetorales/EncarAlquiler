@@ -1,21 +1,23 @@
-
 <div class="col-md-10 col-md-offset-1">
   <p id="notice"><%= notice %></p>
-  <h1>Lista de Habitaciones</h1>
+    <h1 class="text-center text-uppercase">
+      Habitaciones
+        <th>
+          <%= link_to glyph(:plus), new_habitacion_path, class: 'btn btn-primary btn-sm' %>
+        </th> 
+    </h1>
 </div>
 <div class="col-md-10 col-md-offset-1">
   <div class="table-responsive">
     <table class="table table-bordered table-hover">
       <thead>
-        <tr class="success">
+        <tr class="info">
           <th class="text-center">Nombre</th>
           <th class="text-center">Tipo</th>
           <th class="text-center">Descripcion</th>
           <th class="text-center">Precio</th>
           <th class="text-center">Estado</th>
-          <th class="text-center">Acciones</th>       
-          <th><%= link_to glyph(:plus), new_habitacion_path, class: 'btn btn-primary btn-sm' %></th> 
-
+          <th class="text-center">Acciones</th>
         </tr>
       </thead>
       <tbody>

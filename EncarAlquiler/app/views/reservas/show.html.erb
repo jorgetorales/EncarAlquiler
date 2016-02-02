@@ -1,4 +1,4 @@
-<h1 class="container">Reserva</h1>
+<h1 class="text-center text-uppercase container">Reserva</h1>
 <p id="notice"><%= notice %></p>
 <div class="col-md-10 col-md-offset-1">
   <div class="table-responsive">
@@ -16,7 +16,7 @@
                   <td><%= @reserva.fecha_reserva %></td>
                   <td>
                     <%= link_to glyph(:pencil), edit_reserva_path(@reserva), class: 'btn btn-warning btn-sm' %>
-                    <%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-primary btn-sm' %>
+                    <%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-info btn-sm' %>
                 </tr>
 			</tbody>
     </table>

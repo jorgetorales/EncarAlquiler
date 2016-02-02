@@ -1,19 +1,23 @@
-<div class="container">
-  <h1 class="text-center text-uppercase">
-    Reservas realizadas
-    <%= link_to glyph(:plus), new_reserva_path, class: 'btn btn-primary btn-sm' %>
-  </h1>
+<div class="col-md-10 col-md-offset-1">
+  <p id="notice"><%= notice %></p>
+    <h1 class="text-center text-uppercase">
+      Reservas realizadas
+      <th>
+        <%= link_to glyph(:plus), new_reserva_path, class: 'btn btn-primary btn-sm' %>
+      </th>
+    </h1>
+</div>
   
-    <div class="table well">
-      <table class="table table-striped">
+<div class="col-md-10 col-md-offset-1">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
         <thead>
           <tr class="info">
             <th class="text-center">Locatario</th>
             <th class="text-center">Fecha de reserva</th>
             <th class="text-center">Acciones</th>
-      
-    </tr>
-  </thead>
+          </tr>
+        </thead>
   <tbody>
     <% @reservas.each do |reserva| %>
       <tr class="text-center">

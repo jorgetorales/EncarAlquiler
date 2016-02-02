@@ -9,11 +9,11 @@
       </ul>
     </div>
   <% end %>
-<div class="col-md-10 col-md-offset-1">
-<div class="table-responsive espacio">
+<div class="col-md-12">
+<div class="table-responsive">
     <table class="table table-bordered table-hover">
       <thead>
-        <tr class="success">
+        <tr class="info">
           <th class="text-center">
             <%= f.label :nombre %><br>
           </th>
@@ -29,25 +29,37 @@
           <th class="text-center">
             <%= f.label :email %><br>
           </th>
+          
+          <!--ACCIONES-->
+          <th class="text-center">
+            Acciones
+          </th>
+
         </tr>
       </thead>
 
       <tbody>
-          <tr>
+          <tr class="text-center">
             <td><%= f.text_field :nombre %></td>
             <td><%= f.text_field :apellido %></td>
             <td><%= f.text_field :ci %></td>
             <td><%= f.text_field :telefono %></td>
             <td><%= f.text_field :email %></td>
+
+            <!--BOTONES EN ACCIONES en new habitaciones-->
+            <td>
+               <%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
+                  <span class="glyphicon glyphicon-floppy-disk"></span>
+                <% end %>
+
+                <%= link_to glyph(:remove), @locatario, class: 'btn btn-danger btn-sm' %>
+
+                <%= link_to glyph(:arrow_left), locatarios_path, class: 'btn btn-info btn-sm' %>
+
+            </td>
+
           </tr>
       </tbody>
     </table>
-  </div>
-
-
-  <div class="actions">
-      <%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
-                  <span class="glyphicon glyphicon-floppy-disk"></span>
-                <% end %>
-    </div>
+  </div>  
 <% end %>

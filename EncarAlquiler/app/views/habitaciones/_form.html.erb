@@ -11,11 +11,11 @@
   <% end %>
 
 
-    <div class="col-md-10 col-md-offset-1">
-    <div class="table-responsive espacio">
+    <div class="col-md-12">
+    <div class="table-responsive">
       <table class="table table-bordered table-hover">
         <thead>
-          <tr class="success">
+          <tr class="info">
             <th class="text-center">
               <%= f.label :numero %><br>
             </th>
@@ -31,25 +31,35 @@
             <th class="text-center">
               <%= f.label :estado %><br>
             </th>
+            <!--ACCIONES-->
+            <th class="text-center">
+              Acciones
+            </th>
           </tr>
         </thead>
 
         <tbody>
-            <tr>
+            <tr class="text-center">
               <td><%= f.text_field :numero %></td>
               <td> <%= f.collection_select(:tipo_id, Tipo.all, :id, :nombre, { prompt: true}, {:class=>'select2'}) %></td>
               <td><%= f.text_field :descripcion %></td>
               <td><%= f.text_field :precio %></td>
               <td><%= f.text_field :estado %></td>
+
+              <!--BOTONES EN ACCIONES en new habitaciones-->
+              <td>
+                <%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
+                    <span class="glyphicon glyphicon-floppy-disk"></span>
+                  <% end %>
+
+                  <%= link_to glyph(:remove), @habitacion, class: 'btn btn-danger btn-sm' %>
+
+                  <%= link_to glyph(:arrow_left), habitaciones_path, class: 'btn btn-info btn-sm' %>
+              </td>
+
             </tr>
         </tbody>
       </table>
-    </div>
-
-    <div class="actions">
-      <%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
-                  <span class="glyphicon glyphicon-floppy-disk"></span>
-                <% end %>
     </div>
   </div>
 <% end %>
