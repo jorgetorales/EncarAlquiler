@@ -1,12 +1,26 @@
+<h1 class="espacio">Reserva</h1>
 <p id="notice"><%= notice %></p>
-<p>
-  <strong>Locatario:</strong>
-  <%= @reserva.locatario_id %>
-</p>
-<p>
-  <strong>Fecha reserva:</strong>
-  <%= @reserva.fecha_reserva %>
-</p>
-
-<%= link_to glyph(:pencil), edit_reserva_path(@reserva), class: 'btn btn-warning btn-sm' %> |
-<%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-primary btn-sm' %>
+<div class="col-md-10 col-md-offset-1">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+            <thead>
+              <tr class="success">
+              	<th class="text-center">Locatario</th>
+                <th class="text-center">Fecha de Reserva</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                	<td><%= @reserva.locatario_id %></td>
+                    <td><%= @reserva.fecha_reserva %></td>
+                </tr>
+			</tbody>
+    </table>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="actions">
+  	<%= link_to glyph(:pencil), edit_reserva_path(@reserva), class: 'btn btn-warning btn-sm' %>
+  	<%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-primary btn-sm' %>
+</div>
+</div>

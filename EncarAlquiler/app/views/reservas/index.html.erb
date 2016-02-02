@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
-<h1>Reservas Realizadas</h1>
+<div class="container">
+  <h1 class="text-center text-uppercase">Reservas realizadas</h1>
+  
+    <div class="table well">
+      <table class="table table-striped">
+        <thead>
+          <tr class="info">
+            <th class="text-center">Locatario</th>
+            <th class="text-center">Fecha de reserva</th>
+            <th class="text-center">Acciones</th>
+      <th>
 
-<table>
-  <thead>
-    <tr>
-      <th>Locatario</th>
-      <th>   </th>
-      <th>Fecha reserva</th>
-      <th colspan="3"></th>
+        <%= link_to glyph(:plus), new_reserva_path, class: 'btn btn-primary btn-sm' %>
+      </th>
     </tr>
   </thead>
   <tbody>
     <% @reservas.each do |reserva| %>
-      <tr>
+      <tr class="text-center">
         <td><%= reserva.locatario_id %></td>
-        <th>   </th>
         <td><%= reserva.fecha_reserva %></td>
-        <td><%= link_to glyph(:eye_open), reserva, class: 'btn btn-info btn-sm' %></td>
-        <td><%= link_to glyph(:pencil), edit_reserva_path(reserva), class: 'btn btn-warning btn-sm' %></td>
-        <td><%= link_to glyph(:trash), reserva, method: :delete, data: { confirm: 'Estas seguro?' }, class: 'btn btn-danger btn-sm'  %></td>
+        <td><%= link_to glyph(:eye_open), reserva, class: 'btn btn-info btn-sm' %>
+            <%= link_to glyph(:pencil), edit_reserva_path(reserva), class: 'btn btn-warning btn-sm' %>
+            <%= link_to glyph(:trash), reserva, method: :delete, data: { confirm: 'Estas seguro?' }, class: 'btn btn-danger btn-sm'  %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
 
-<br>
-
-<%= link_to glyph(:plus), new_reserva_path, class: 'btn btn-primary btn-sm' %>
