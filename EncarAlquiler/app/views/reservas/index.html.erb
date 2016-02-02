@@ -1,5 +1,8 @@
 <div class="container">
-  <h1 class="text-center text-uppercase">Reservas realizadas</h1>
+  <h1 class="text-center text-uppercase">
+    Reservas realizadas
+    <%= link_to glyph(:plus), new_reserva_path, class: 'btn btn-primary btn-sm' %>
+  </h1>
   
     <div class="table well">
       <table class="table table-striped">
@@ -8,10 +11,7 @@
             <th class="text-center">Locatario</th>
             <th class="text-center">Fecha de reserva</th>
             <th class="text-center">Acciones</th>
-      <th>
-
-        <%= link_to glyph(:plus), new_reserva_path, class: 'btn btn-primary btn-sm' %>
-      </th>
+      
     </tr>
   </thead>
   <tbody>
