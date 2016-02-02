@@ -1,7 +1,7 @@
-<div class="container">
+<%= form_for(@reserva) do |f| %>
+<div class="container well">
     <div class="row">
         <div class="col-lg-12">
-            <%= form_for(@reserva) do |f| %>
             <% if @reserva.errors.any? %>
             <div id="error_explanation">
                 <h2><%= pluralize(@reserva.errors.count, "error") %> prohibited this reserva from being saved:</h2>
@@ -14,7 +14,7 @@
             <% end %>
         </div>
     </div>
-    <div class="row well">
+    <div class="row">
         <div class="col-lg-12">
             <div class="form-group col-lg-5">
                 <%= f.label :locatario_id %><br>
@@ -35,7 +35,7 @@
         </div>
     </div>
     <%= f.nested_fields_for :reservas_habitaciones,  layout: :inline do |ff| %>
-    <div class="row well">
+    <div class="row">
         <div class="col-lg-12 input-daterange" data-provide="datepicker">
           <div class="form-group col-lg-3">
             <%= ff.collection_select(:habitacion_id, Habitacion.all, :id, :numero,  { prompt: true}, {:class=>'form-control  input-sm', id: 'numero' }) %>
