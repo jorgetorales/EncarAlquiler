@@ -51,7 +51,9 @@
          </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if usuario_signed_in? %>
-            <li><%= link_to 'Salir', destroy_usuario_session_path, class: 'btn btn-default btn-xs',  method: :delete%></li>
+            <li>
+            <%= link_to glyph(:log_out), destroy_usuario_session_path, class: 'btn-lg',  method: :delete%>
+            </li>
             <% end %>
           </ul>
         </div><!--/.nav-collapse -->
