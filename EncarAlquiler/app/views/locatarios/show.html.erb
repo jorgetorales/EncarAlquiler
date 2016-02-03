@@ -1,4 +1,9 @@
-<h1 class="text-center text-uppercase container">Locatarios</h1>
+<h1 class="text-center text-uppercase container espacio">
+  Locatarios
+  <th>
+      <%= link_to  glyph(:plus), new_locatario_path, class: 'btn btn-primary btn-sm' %>
+  </th>
+</h1>
 <p id="notice"><%= notice %></p>
 <div class="col-md-10 col-md-offset-1">
   <div class="table-responsive">
