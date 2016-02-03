@@ -40,11 +40,11 @@
 
         <tbody>
             <tr class="text-center">
-              <td><%= f.text_field :numero %></td>
-              <td> <%= f.collection_select(:tipo_id, Tipo.all, :id, :nombre, { prompt: true}, {:class=>'select2'}) %></td>
-              <td><%= f.text_field :descripcion %></td>
-              <td><%= f.text_field :precio %></td>
-              <td><%= f.text_field :estado %></td>
+              <td><%= f.text_field :numero, class:"form-control input-sm" %></td>
+              <td> <%= f.collection_select(:tipo_id, Tipo.all, :id, :nombre, { prompt: true}, {:class=>'form-control select2'}) %></td>
+              <td><%= f.text_field :descripcion, class:"form-control input-sm" %></td>
+              <td><%= f.text_field :precio, class:"form-control input-sm" %></td>
+              <td><%= f.text_field :estado, class:"form-control input-sm" %></td>
 
               <!--BOTONES EN ACCIONES en new habitaciones-->
               <td>
