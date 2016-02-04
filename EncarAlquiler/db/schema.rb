@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160123201035) do
+ActiveRecord::Schema.define(version: 20160204192639) do
 
   create_table "habitaciones", force: :cascade do |t|
     t.integer  "tipo_id",     limit: 4
@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(version: 20160123201035) do
     t.string   "email",      limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "pagos", force: :cascade do |t|
+    t.integer  "reserva_id",  limit: 4
+    t.integer  "montoapagar", limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "reservas", force: :cascade do |t|

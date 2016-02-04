@@ -28,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to ' EncarAlquiler ', 'principal#index', class:'btn btn-lg glyphicon glyphicon-home'%>
+          <%= link_to ' EncarAlquiler ', '/principal', class:'btn btn-lg glyphicon glyphicon-home'%>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <% if usuario_signed_in? %>
@@ -38,6 +38,7 @@
                 <%= link_to ' Locatarios', locatarios_path, class:'btn btn-lg glyphicon glyphicon-user'%>
                 <%= link_to ' Habitaciones', habitaciones_path, class:'btn btn-lg glyphicon glyphicon-tower'%>
                 <%= link_to ' Tipos', tipos_path, class:'btn btn-lg glyphicon glyphicon-bookmark'%>
+                <%= link_to ' Pagos', pagos_path, class:'btn btn-lg glyphicon glyphicon-credit-card'%>
               </div>
               <!--<li class="dropdown">
                 <a href="a" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Administración <span class="caret"></span></a>
