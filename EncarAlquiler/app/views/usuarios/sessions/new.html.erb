@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container espacio">
   <div class="row">
-    <div class="col-lg-offset-4 col-lg-4">
-      <div class="page-header">
-      </br>
-    </br>
-        <h2><center>Iniciar Sesión</center></h2>
-      </div>
+    <div class="col-lg-8" class="img-responsive">
+            <img src="../img/adm.jpg" style="padding-top: 100px;" width="500" height="400" >
     </div>
-    <div class="col-lg-offset-4 col-lg-4">
+    <div class="col-lg-3">
+      <div class="page-header">
+        <h2>Iniciar Sesión</h2>
+      </div>
+    
       <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
           <%= f.email_field :email, autofocus: true %>
@@ -20,13 +20,12 @@
             <%= f.check_box :remember_me, label: "Recordarme" %>
           </div>
         <% end -%>
-        <div class="">
           <%= button_tag(type: 'submit', class: "btn btn-success btn-block") do %>
           <span class="glyphicon glyphicon-log-in"></span> Ingresar 
         <% end %>
-        </div>
       <% end %>
+      <%= render "usuarios/shared/links" %>
     </div>
   </div>
 </div>
-<%= render "usuarios/shared/links" %>
+
