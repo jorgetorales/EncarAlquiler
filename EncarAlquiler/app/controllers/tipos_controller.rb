@@ -21,7 +21,7 @@ class TiposController < ApplicationController
 
     respond_to do |format|
       if @tipo.save
-        format.html { redirect_to @tipo, notice: 'Tipo ha sido creado MAN.' }
+        format.html { redirect_to @tipo, notice: 'Tipo cerado.' }
         format.json { render :show, status: :created, location: @tipo }
       else
         format.html { render :new }
@@ -33,7 +33,7 @@ class TiposController < ApplicationController
   def update
     respond_to do |format|
       if @tipo.update(tipo_params)
-        format.html { redirect_to @tipo, notice: 'Locatario was successfully updated.' }
+        format.html { redirect_to @tipo, notice: 'Tipo editado.' }
         format.json { render :show, status: :ok, location: @tipo }
       else
         format.html { render :edit }
@@ -46,7 +46,7 @@ class TiposController < ApplicationController
   def destroy
     @tipo.destroy
     respond_to do |format|
-      format.html { redirect_to tipos_url, notice: 'Locatario was successfully destroyed.' }
+      format.html { redirect_to tipos_url, notice: 'Tipo destruido.' }
       format.json { head :no_content }
     end
   end

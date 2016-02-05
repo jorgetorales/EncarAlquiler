@@ -1,7 +1,10 @@
 <%= form_for(@habitacion) do |f| %>
+<div class="container">
+  <div class="col-md-12">
   <% if @habitacion.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@habitacion.errors.count, "error") %> Complete los datos antes de guardar:</h2>
+    <div  class="alert alert-dismissible alert-danger">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <h2><%= pluralize(@habitacion.errors.count, "error") %> complete los datos antes de guardar:</h2>
       <ul>
       <% @habitacion.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -9,6 +12,8 @@
       </ul>
     </div>
   <% end %>
+  </div>
+  </div>
   <div class="container">
   <div class="col-md-12">
     <div class="table-responsive">
@@ -16,19 +21,19 @@
         <thead>
           <tr class="info">
             <th class="text-center">
-              <%= f.label :numero %><br>
+              <%= f.label :numero %>
             </th>
             <th class="text-center">
-              <%= f.label :tipo_id %><br>
+              <%= f.label :tipo_id %>
             </th>
             <th class="text-center">
-              <%= f.label :descripcion %><br>
+              <%= f.label :descripcion %>
             </th>
             <th class="text-center">
-              <%= f.label :precio %><br>
+              <%= f.label :precio %>
             </th>
             <th class="text-center">
-              <%= f.label :estado %><br>
+              <%= f.label :estado %>
             </th>
             <!--ACCIONES-->
             <th class="text-center">

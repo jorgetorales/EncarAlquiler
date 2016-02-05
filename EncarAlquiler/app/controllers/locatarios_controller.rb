@@ -43,7 +43,7 @@ before_action :set_locatario, only: [:show, :edit, :update, :destroy]
 
     respond_to do |format|
       if @locatario.save
-        format.html { redirect_to @locatario, notice: 'Locatario was successfully created.' }
+        format.html { redirect_to @locatario, notice: 'Locatario creado.' }
         format.json { render :show, status: :created, location: @locatario }
       else
         format.html { render :new }
@@ -57,7 +57,7 @@ before_action :set_locatario, only: [:show, :edit, :update, :destroy]
   def update
     respond_to do |format|
       if @locatario.update(locatario_params)
-        format.html { redirect_to @locatario, notice: 'Locatario was successfully updated.' }
+        format.html { redirect_to @locatario, notice: 'Locatario editado.' }
         format.json { render :show, status: :ok, location: @locatario }
       else
         format.html { render :edit }
@@ -71,7 +71,7 @@ before_action :set_locatario, only: [:show, :edit, :update, :destroy]
   def destroy
     @locatario.destroy
     respond_to do |format|
-      format.html { redirect_to locatarios_url, notice: 'Locatario was successfully destroyed.' }
+      format.html { redirect_to locatarios_url, notice: 'Locatario destruido.' }
       format.json { head :no_content }
     end
   end

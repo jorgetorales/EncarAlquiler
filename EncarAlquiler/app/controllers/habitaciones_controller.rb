@@ -29,7 +29,7 @@ class HabitacionesController < ApplicationController
 
     respond_to do |format|
       if @habitacion.save
-        format.html { redirect_to @habitacion, notice: 'Habitacion was successfully created.' }
+        format.html { redirect_to @habitacion, notice: 'Habitacion creada.' }
         format.json { render :show, status: :created, location: @habitacion }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class HabitacionesController < ApplicationController
   def update
     respond_to do |format|
       if @habitacion.update(habitacion_params)
-        format.html { redirect_to @habitacion, notice: 'Habitacion was successfully updated.' }
+        format.html { redirect_to @habitacion, notice: 'Habitacion editada.' }
         format.json { render :show, status: :ok, location: @habitacion }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class HabitacionesController < ApplicationController
   def destroy
     @habitacion.destroy
     respond_to do |format|
-      format.html { redirect_to habitaciones_url, notice: 'Habitacion was successfully destroyed.' }
+      format.html { redirect_to habitaciones_url, notice: 'Habitacion destruida.' }
       format.json { head :no_content }
     end
   end

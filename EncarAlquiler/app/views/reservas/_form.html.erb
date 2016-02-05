@@ -3,8 +3,9 @@
     <div class="row">
         <div class="col-lg-12">
             <% if @reserva.errors.any? %>
-            <div id="error_explanation">
-                <h2><%= pluralize(@reserva.errors.count, "error") %> prohibited this reserva from being saved:</h2>
+            <div  class="alert alert-dismissible alert-danger">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+                <h2><%= pluralize(@reserva.errors.count, "error") %> complete los datos antes de guardar:</h2>
                 <ul>
                     <% @reserva.errors.full_messages.each do |message| %>
                     <li><%= message %></li>
@@ -17,11 +18,11 @@
     <div class="row well">
         <div class="col-lg-12">
             <div class="form-group col-lg-5">
-                <%= f.label :locatario_id %><br>
+                <%= f.label :locatario_id %>
                 <%= f.collection_select(:locatario_id, Locatario.all, :id, :nombre,  { prompt: true}, {:class=>'form-control select2'}) %>
             </div>
             <div class="form-group col-lg-5" >
-                <%= f.label :fecha_reserva %><br>
+                <%= f.label :fecha_reserva %>
                 <%= f.text_field :fecha_reserva, class: 'form-control input-sm datepicker', placeholder: 'Fecha de reserva'  %>
             </div>
 
