@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   
-  resources :pagos
-  resources :habitaciones
   resources :reservas_habitaciones
   resources :reservas
+  resources :pagos
+  resources :habitaciones
   resources :locatarios
   resources :tipos
   resources :principal

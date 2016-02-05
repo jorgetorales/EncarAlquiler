@@ -5,9 +5,11 @@ one:
   habitacion_id: 1
   fecha_inicio: MyString
   fecha_fin: MyString
+  precio: 1
 
 two:
   reserva_id: 1
   habitacion_id: 1
   fecha_inicio: MyString
   fecha_fin: MyString
+  precio: 1

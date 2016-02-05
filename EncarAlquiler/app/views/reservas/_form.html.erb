@@ -17,13 +17,17 @@
     </div>
     <div class="row well">
         <div class="col-lg-12">
-            <div class="form-group col-lg-5">
+            <div class="form-group col-lg-4">
                 <%= f.label :locatario_id %>
                 <%= f.collection_select(:locatario_id, Locatario.all, :id, :nombre,  { prompt: true}, {:class=>'form-control select2'}) %>
             </div>
-            <div class="form-group col-lg-5" >
+            <div class="form-group col-lg-3" >
                 <%= f.label :fecha_reserva %>
                 <%= f.text_field :fecha_reserva, class: 'form-control input-sm datepicker', placeholder: 'Fecha de reserva'  %>
+            </div>
+            <div class="form-group col-lg-3" >
+                <%= f.label :monto %>
+                <%= f.text_field :monto, class: 'form-control input-sm', placeholder: 'Monto total'  %>
             </div>
 
             <div class="form-group col-lg-2">
@@ -42,13 +46,17 @@
     </div>
     <%= f.nested_fields_for :reservas_habitaciones,  layout: :inline do |ff| %>
     <div class="row">
-        <div class="col-lg-12 input-daterange" data-provide="datepicker">
           <div class="form-group col-lg-3">
-            <%= ff.collection_select(:habitacion_id, Habitacion.all, :id, :numero, { prompt: true}, {:class=>'form-control  input-sm select2', id: 'numero' }) %>
-          </div>
-            <div class="form-group col-lg-3">
+            <% habitaciones_array = Habitacion.all.map { |habitacion| ["#{habitacion.numero} #{habitacion.descripcion} #{habitacion.precio } #{habitacion.estado} ", habitacion.id] } %>
+            <%= ff.select(:habitacion_id, options_for_select(habitaciones_array), { prompt: true}, {:class=>'form-control  input-sm select2', id: 'habitacion' }) %>
+        </div>
+            <div class="form-group col-lg-1">
                 <%= ff.remove_nested_fields_link glyph(:trash) , class: 'btn btn-danger btn-sm ', role: 'button', data: { confirm: 'Confirmar para eliminar este registro'} , hide_label: true %>
             </div>
+          <div class="form-group col-lg-2">
+            <%= ff.number_field :precio, class: 'form-control input-sm', placeholder: 'Total', id: 'precio' %>
+          </div>
+        <div class="input-daterange" data-provide="datepicker">
           <div class="form-group col-lg-3">
             <%= ff.text_field :fecha_inicio, class: 'form-control input-sm', placeholder: 'Fecha de inicio', id: 'fecha_inicio' %>
           </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160204192639) do
+ActiveRecord::Schema.define(version: 20160205212621) do
 
   create_table "habitaciones", force: :cascade do |t|
     t.integer  "tipo_id",     limit: 4
@@ -42,9 +42,12 @@ ActiveRecord::Schema.define(version: 20160204192639) do
     t.datetime "updated_at",            null: false
   end
 
+  add_index "pagos", ["reserva_id"], name: "pagos_reserva_id_fk", using: :btree
+
   create_table "reservas", force: :cascade do |t|
     t.integer  "locatario_id",  limit: 4
     t.string   "fecha_reserva", limit: 255
+    t.integer  "monto",         limit: 4
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
@@ -56,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160204192639) do
     t.integer  "habitacion_id", limit: 4
     t.string   "fecha_inicio",  limit: 255
     t.string   "fecha_fin",     limit: 255
+    t.integer  "precio",        limit: 4
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end

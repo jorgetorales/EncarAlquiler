@@ -18,7 +18,7 @@ class ReservasHabitacionesControllerTest < ActionController::TestCase
 
   test "should create reserva_habitacion" do
     assert_difference('ReservaHabitacion.count') do
-      post :create, reserva_habitacion: { fecha_fin: @reserva_habitacion.fecha_fin, fecha_inicio: @reserva_habitacion.fecha_inicio, habitacion_id: @reserva_habitacion.habitacion_id, reserva_id: @reserva_habitacion.reserva_id }
+      post :create, reserva_habitacion: { fecha_fin: @reserva_habitacion.fecha_fin, fecha_inicio: @reserva_habitacion.fecha_inicio, habitacion_id: @reserva_habitacion.habitacion_id, precio: @reserva_habitacion.precio, reserva_id: @reserva_habitacion.reserva_id }
     end
 
     assert_redirected_to reserva_habitacion_path(assigns(:reserva_habitacion))
@@ -35,7 +35,7 @@ class ReservasHabitacionesControllerTest < ActionController::TestCase
   end
 
   test "should update reserva_habitacion" do
-    patch :update, id: @reserva_habitacion, reserva_habitacion: { fecha_fin: @reserva_habitacion.fecha_fin, fecha_inicio: @reserva_habitacion.fecha_inicio, habitacion_id: @reserva_habitacion.habitacion_id, reserva_id: @reserva_habitacion.reserva_id }
+    patch :update, id: @reserva_habitacion, reserva_habitacion: { fecha_fin: @reserva_habitacion.fecha_fin, fecha_inicio: @reserva_habitacion.fecha_inicio, habitacion_id: @reserva_habitacion.habitacion_id, precio: @reserva_habitacion.precio, reserva_id: @reserva_habitacion.reserva_id }
     assert_redirected_to reserva_habitacion_path(assigns(:reserva_habitacion))
   end
 

@@ -6,6 +6,7 @@
               <tr class="info">
               	<th class="text-center">Locatario</th>
                 <th class="text-center">Fecha de Reserva</th>
+                <th class="text-center">Monto</th>
                 <th class="text-center">Acciones</th>
               </tr>
             </thead>
@@ -13,6 +14,7 @@
                 <tr class="text-center">
                 	<td><%= @reserva.locatario_id %></td>
                   <td><%= @reserva.fecha_reserva %></td>
+                  <td><%= @reserva.monto %></td>
                   <td>
                     <%= link_to glyph(:pencil), edit_reserva_path(@reserva), class: 'btn btn-warning btn-sm' %>
                     <%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-info btn-sm' %>

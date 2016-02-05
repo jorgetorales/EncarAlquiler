@@ -7,5 +7,5 @@ class Reserva < ActiveRecord::Base
 	accepts_nested_attributes_for :reservas_habitaciones, allow_destroy: true
 
 
-	validates :locatario_id, :fecha_reserva, presence: true
+	validates :locatario_id, :fecha_reserva, :monto, presence: true
 end

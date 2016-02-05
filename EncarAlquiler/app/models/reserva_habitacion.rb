@@ -6,4 +6,5 @@ class ReservaHabitacion < ActiveRecord::Base
 	validates :habitacion_id, presence: true
 	validates :fecha_inicio, presence: true
 	validates :fecha_fin, presence: true
+	validates :precio, presence: true
 end

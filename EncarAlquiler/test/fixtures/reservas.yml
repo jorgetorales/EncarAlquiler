@@ -3,7 +3,9 @@
 one:
   locatario_id: 1
   fecha_reserva: MyString
+  monto: 1
 
 two:
   locatario_id: 1
   fecha_reserva: MyString
+  monto: 1

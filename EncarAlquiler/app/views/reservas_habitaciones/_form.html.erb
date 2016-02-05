@@ -2,6 +2,7 @@
   <% if @reserva_habitacion.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@reserva_habitacion.errors.count, "error") %> prohibited this reserva_habitacion from being saved:</h2>
+
       <ul>
       <% @reserva_habitacion.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -9,6 +10,7 @@
       </ul>
     </div>
   <% end %>
+
   <div class="field">
     <%= f.label :reserva_id %><br>
     <%= f.number_field :reserva_id %>
@@ -24,6 +26,10 @@
   <div class="field">
     <%= f.label :fecha_fin %><br>
     <%= f.text_field :fecha_fin %>
+  </div>
+  <div class="field">
+    <%= f.label :precio %><br>
+    <%= f.number_field :precio %>
   </div>
   <div class="actions">
     <%= f.submit %>

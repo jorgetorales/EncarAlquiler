@@ -20,5 +20,10 @@
   <%= @reserva_habitacion.fecha_fin %>
 </p>
 
-<%= link_to 'Edit', edit_reserva_habitacion_path(@reserva_habitacion) class: 'btn btn-danger btn-xs'  %>|
-<%= link_to 'Back', reservas_habitaciones_path class: 'btn btn-danger btn-xs'  %>
+<p>
+  <strong>Precio:</strong>
+  <%= @reserva_habitacion.precio %>
+</p>
+
+<%= link_to 'Edit', edit_reserva_habitacion_path(@reserva_habitacion) %> |
+<%= link_to 'Back', reservas_habitaciones_path %>
