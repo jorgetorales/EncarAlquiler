@@ -6,31 +6,27 @@
 </h1>
 <p id="notice"><%= notice %></p>
 <div class="col-md-10 col-md-offset-1">
-  <div class="table-responsive">
-    <table class="table table-bordered table-hover">
-            <thead>
-              <tr class="info">
-                <th class="text-center">Nombre</th>
-                <th class="text-center">Apellido</th>
-                <th class="text-center">CI:</th>
-                <th class="text-center">Telefono</th>
-                <th class="text-center">Email</th>
-                <th class="text-center">Acciones</th>
+  <div class="CSS_Table_Example">
+    <table>
+              <tr>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>CI:</td>
+                <td>Telefono</td>
+                <td>Email</td>
+                <td>Acciones</td>
               </tr>
-            </thead>
-            <tbody>
-                <tr class="text-center">
-                  <td><%= @locatario.nombre %></td>
-                  <td><%= @locatario.apellido %></td>
-                  <td><%= @locatario.ci %></td>
-                  <td><%= @locatario.telefono %></td>
-                  <td><%= @locatario.email %></td>
-                  <td>
+                <tr>
+                  <td><center><%= @locatario.nombre %></center></td>
+                  <td><center><%= @locatario.apellido %></center></td>
+                  <td><center><%= @locatario.ci %></center></td>
+                  <td><center><%= @locatario.telefono %></center></td>
+                  <td><center><%= @locatario.email %></center></td>
+                  <td><center>
                     <%= link_to glyph(:pencil), edit_locatario_path(@locatario), class: 'btn btn-warning btn-sm' %>
                     <%= link_to glyph(:arrow_left), locatarios_path,  class: 'btn btn-info btn-sm' %>
-                  </td>
+                  </center></td>
                 </tr>
-            </tbody>
     </table>
   </div>
 </div>

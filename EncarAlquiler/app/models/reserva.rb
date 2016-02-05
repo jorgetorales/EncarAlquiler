@@ -3,6 +3,7 @@ class Reserva < ActiveRecord::Base
 	has_many :reservas_habitaciones
 	has_many :locatarios
 	has_many :habitaciones, through: :reservas_habitaciones
+	has_many :precios, through: :habitaciones
 
 	accepts_nested_attributes_for :reservas_habitaciones, allow_destroy: true
 

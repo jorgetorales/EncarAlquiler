@@ -16,52 +16,44 @@
   </div>
   <div class="container">
   <div class="col-md-12">
-    <div class="table-responsive">
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr class="info">
-            <th class="text-center">
+    <div class="CSS_Table_Example">
+      <table>
+          <tr>
+            <td>
               <%= f.label :numero %>
-            </th>
-            <th class="text-center">
+            </td>
+            <td>
               <%= f.label :tipo_id %>
-            </th>
-            <th class="text-center">
+            </td>
+            <td>
               <%= f.label :descripcion %>
-            </th>
-            <th class="text-center">
+            </d>
+            <td>
               <%= f.label :precio %>
-            </th>
-            <th class="text-center">
+            </td>
+            <td>
               <%= f.label :estado %>
-            </th>
+            </td>
             <!--ACCIONES-->
-            <th class="text-center">
+            <td>
               Acciones
-            </th>
+            </td>
           </tr>
-        </thead>
-
-        <tbody>
-            <tr class="text-center">
-              <td><%= f.text_field :numero, class:"form-control input-sm" %></td>
-              <td> <%= f.collection_select(:tipo_id, Tipo.all, :id, :nombre, { prompt: true}, {:class=>'form-control select2'}) %></td>
-              <td><%= f.text_field :descripcion, class:"form-control input-sm" %></td>
-              <td><%= f.text_field :precio, class:"form-control input-sm" %></td>
-              <td><%= f.text_field :estado, class:"form-control input-sm" %></td>
+            <tr>
+              <td><center><%= f.text_field :numero, class:"form-control input-sm" %></center></td>
+              <td><center><%= f.collection_select(:tipo_id, Tipo.all, :id, :nombre, { prompt: true}, {:class=>'form-control select2'}) %></center></td>
+              <td><center><%= f.text_field :descripcion, class:"form-control input-sm" %></center></td>
+              <td><center><%= f.text_field :precio, class:"form-control input-sm" %></center></td>
+              <td><center><%= f.text_field :estado, class:"form-control input-sm" %></center></td>
 
               <!--BOTONES EN ACCIONES en new habitaciones-->
-              <td>
+              <td><center>
                 <%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
-                    <span class="glyphicon glyphicon-floppy-disk"></span>
+                  <span class="glyphicon glyphicon-floppy-disk"></span>
                   <% end %>
-
-                  <%= link_to glyph(:remove), @habitacion, class: 'btn btn-danger btn-sm' %>
-
-                  <%= link_to glyph(:arrow_left), habitaciones_path, class: 'btn btn-info btn-sm' %>
-              </td>
+                <%= link_to glyph(:remove), @habitacion, class: 'btn btn-danger btn-sm' %>
+              </center></td>
             </tr>
-        </tbody>
       </table>
     </div>
   </div>

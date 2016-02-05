@@ -16,54 +16,32 @@
   </div>
   <div class="container">
   <div class="col-md-12">
-  <div class="table-responsive">
-    <table class="table table-bordered table-hover">
-      <thead>
-        <tr class="info">
-          <th class="text-center">
-            <%= f.label :nombre %>
-          </th>
-          <th class="text-center">
-            <%= f.label :apellido %>
-          </th>
-          <th class="text-center">
-            <%= f.label :ci %>
-          </th>
-          <th class="text-center">
-            <%= f.label :telefono %>
-          </th>
-          <th class="text-center">
-            <%= f.label :email %>
-          </th>
-          
-          <!--ACCIONES-->
-          <th class="text-center">
+  <div class="CSS_Table_Example">
+    <table>
+      <tr>
+          <td><%= f.label :nombre %></td>
+          <td><%= f.label :apellido %></td>
+          <td><%= f.label :ci %></td>
+          <td><%= f.label :telefono %></td>
+          <td><%= f.label :email %></td>
+          <td>
             Acciones
-          </th>
+          </td>
 
         </tr>
-      </thead>
-
-      <tbody>
-          <tr class="text-center">
-            <td><%= f.text_field :nombre, class:"form-control input-sm" %></td>
-            <td><%= f.text_field :apellido, class:"form-control input-sm" %></td>
-            <td><%= f.text_field :ci, class:"form-control input-sm"%></td>
-            <td><%= f.text_field :telefono, class:"form-control input-sm" %></td>
-            <td><%= f.text_field :email, class:"form-control input-sm" %></td>
-
-            <!--BOTONES EN ACCIONES en new habitaciones-->
-            <td>
+        <tr>
+            <td><center><%= f.text_field :nombre, class:"form-control input-sm" %></center></td>
+            <td><center><%= f.text_field :apellido, class:"form-control input-sm" %></center></td>
+            <td><center><%= f.text_field :ci, class:"form-control input-sm"%></center></td>
+            <td><center><%= f.text_field :telefono, class:"form-control input-sm" %></center></td>
+            <td><center><%= f.text_field :email, class:"form-control input-sm" %></center></td>
+            <td><center>
                <%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
                   <span class="glyphicon glyphicon-floppy-disk"></span>
                 <% end %>
-
                 <%= link_to glyph(:remove), @locatario, class: 'btn btn-danger btn-sm' %>
-
-                <%= link_to glyph(:arrow_left), locatarios_path, class: 'btn btn-info btn-sm' %>
-            </td>
+            </center></td>
           </tr>
-      </tbody>
     </table>
   </div>
   </div>  

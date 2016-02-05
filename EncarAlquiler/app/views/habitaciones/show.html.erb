@@ -5,31 +5,27 @@
   </th>
 </h1>
 <div class="col-md-10 col-md-offset-1">
-  <div class="table-responsive">
-    <table class="table table-bordered table-hover">
-      <thead>
-        <tr class="info">
-          <th class="text-center">Numero</th>
-          <th class="text-center">Tipo</th>
-          <th class="text-center">Descripcion</th>
-          <th class="text-center">Estado</th>
-          <th class="text-center">Precio</th>  
-          <th class="text-center">Acciones</th>       
+  <div class="CSS_Table_Example">
+    <table>
+      <tr>
+          <td>Numero</td>
+          <td>Tipo</td>
+          <td>Descripcion</td>
+          <td>Estado</td>
+          <td>Precio</td>  
+          <td>Acciones</td>       
         </tr>
-      </thead>
-      <tbody>
-        <tr class="text-center">
-          <td><%= @habitacion.numero %></td>
-          <td><%= @habitacion.tipo_id %></td>
-          <td><%= @habitacion.descripcion %></td>
-          <td><%= @habitacion.estado %></td>
-          <td><%= @habitacion.precio %></td>
-          <td>
+        <tr>
+          <td><center><%= @habitacion.numero %></center></td>
+          <td><center><%= @habitacion.tipo_id %></center></td>
+          <td><center><%= @habitacion.descripcion %></center></td>
+          <td><center><%= @habitacion.estado %></center></td>
+          <td><center><%= @habitacion.precio %></center></td>
+          <td><center>
             <%= link_to glyph(:pencil), edit_habitacion_path(@habitacion), class: 'btn btn-warning btn-sm' %>
             <%= link_to glyph(:arrow_left), habitaciones_path, class: 'btn btn-info btn-sm' %>
-          </td>
+          </center></td>
         </tr>
-      </tbody>
     </table>    
   </div>
 </div>

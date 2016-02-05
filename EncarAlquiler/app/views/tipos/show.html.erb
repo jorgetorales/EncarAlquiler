@@ -5,32 +5,25 @@
     </th>
 </h1>
 <div class="col-md-4 col-md-offset-4">
-	<div class="table-responsive">
-	    <table class="table table-bordered table-hover">
-	      <thead>
-	        <tr class="info">
-	          <th class="text-center">
+	<div class=" CSS_Table_Example">
+	    <table>
+	        <tr>
+	          <td>
 	          	Nombre
-	          </th>
-	          <th class="text-center">
+	          </td>
+	          <td>
 	          	Acciones
-	          </th>
-
+	          </td>
 	        </tr>
-	      </thead>
-
-	      <tbody>
-	          <tr class="text-center">
-	            <td>
+	          <tr>
+	            <td><center>
 	            	<%= @tipo.nombre %>
-	            </td>
-
-	            <td>
+	            </td></center>
+	            <td><center>
 	            	<%= link_to glyph(:pencil), edit_tipo_path(@tipo), class: 'btn btn-warning btn-sm' %>
 					<%= link_to glyph(:arrow_left), tipos_path,  class: 'btn btn-info btn-sm' %>
-	            </td>
+	            </center></td>
 	          </tr>
-	      </tbody>
 	    </table>
 	</div>
 </div>
