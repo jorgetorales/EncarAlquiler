@@ -44,7 +44,7 @@
     <div class="row">
         <div class="col-lg-12 input-daterange" data-provide="datepicker">
           <div class="form-group col-lg-3">
-            <%= ff.collection_select(:habitacion_id, Habitacion.all, :id, :numero,  { prompt: true}, {:class=>'form-control  input-sm select2', id: 'numero' }) %>
+            <%= ff.collection_select(:habitacion_id, Habitacion.all, :id, :numero, { prompt: true}, {:class=>'form-control  input-sm select2', id: 'numero' }) %>
           </div>
             <div class="form-group col-lg-3">
                 <%= ff.remove_nested_fields_link glyph(:trash) , class: 'btn btn-danger btn-sm ', role: 'button', data: { confirm: 'Confirmar para eliminar este registro'} , hide_label: true %>
