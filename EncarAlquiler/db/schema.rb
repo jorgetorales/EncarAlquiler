@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20160205212621) do
   create_table "reservas", force: :cascade do |t|
     t.integer  "locatario_id",  limit: 4
     t.string   "fecha_reserva", limit: 255
+    t.string   "estado",        limit: 255
     t.integer  "monto",         limit: 4
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false

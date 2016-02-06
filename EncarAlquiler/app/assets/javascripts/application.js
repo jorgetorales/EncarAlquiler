@@ -25,4 +25,5 @@ $(document).ready(function () {
 	//Initialize Select2 Elements
     $('select.select2').select2({placeholder: "Selecionar", allowclear: true});
     $('.datepicker').datepicker();
+    $('.dropdown-toggle').dropdownHover();
 });
