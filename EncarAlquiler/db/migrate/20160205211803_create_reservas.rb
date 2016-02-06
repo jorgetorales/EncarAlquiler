@@ -3,6 +3,7 @@ class CreateReservas < ActiveRecord::Migration
     create_table :reservas do |t|
       t.integer :locatario_id
       t.string :fecha_reserva
+      t.string :estado
       t.integer :monto
 
       t.timestamps null: false

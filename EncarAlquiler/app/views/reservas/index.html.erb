@@ -12,6 +12,7 @@
             <th class="text-center">Locatario</th>
             <th class="text-center">Fecha de reserva</th>
             <th class="text-center">Monto</th>
+            <th class="text-center">Estado</th>
             <th class="text-center">Acciones</th>
           </tr>
         </thead>
@@ -21,6 +22,7 @@
         <td><%= reserva.locatario.nombre %></td>
         <td><%= reserva.fecha_reserva %></td>
         <td><%= reserva.monto %></td>
+        <td><%= reserva.estado %></td>
         <td><%= link_to glyph(:eye_open), reserva, class: 'btn btn-info btn-sm' %>
             <%= link_to glyph(:pencil), edit_reserva_path(reserva), class: 'btn btn-warning btn-sm' %>
             <%= link_to glyph(:trash), reserva, method: :delete, data: { confirm: 'Estas seguro?' }, class: 'btn btn-danger btn-sm'  %></td>

@@ -17,17 +17,22 @@
     </div>
     <div class="row well">
         <div class="col-lg-12">
-            <div class="form-group col-lg-4">
+            <div class="form-group col-lg-3">
                 <%= f.label :locatario_id %>
                 <%= f.collection_select(:locatario_id, Locatario.all, :id, :nombre,  { prompt: true}, {:class=>'form-control select2'}) %>
             </div>
-            <div class="form-group col-lg-3" >
+            <div class="form-group col-lg-2" >
                 <%= f.label :fecha_reserva %>
                 <%= f.text_field :fecha_reserva, class: 'form-control input-sm datepicker', placeholder: 'Fecha de reserva'  %>
             </div>
-            <div class="form-group col-lg-3" >
+            <div class="form-group col-lg-2" >
                 <%= f.label :monto %>
                 <%= f.text_field :monto, class: 'form-control input-sm', placeholder: 'Monto total'  %>
+            </div>
+
+            <div class="form-group col-lg-3" >
+                <%= f.label :estado %>
+                <%= f.select :estado, options_for_select([['Pediente' ,'Pendiente']]), { prompt: false}, {:class=>'form-control select2', value: 'Pendiente'} %>
             </div>
 
             <div class="form-group col-lg-2">
@@ -37,10 +42,11 @@
                   <span class="glyphicon glyphicon-floppy-disk"></span>
                 <% end %>
 
-                  <%= link_to glyph(:remove), @reserva, class: 'btn btn-danger btn-sm' %>
+                  <button type="reset" class="btn btn-info btn-sm">
+                      <i class="glyphicon glyphicon-refresh"></i>
+                  </button>
 
                   <%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-info btn-sm' %>
-              </td>
             </div>
         </div>
     </div>

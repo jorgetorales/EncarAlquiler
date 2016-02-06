@@ -26,7 +26,12 @@
               <td>Acciones</td>
             </tr>
             <tr>
-              <td><center><%= f.collection_select(:reserva_id, Reserva.all, :id, :locatario_id, { prompt: true}, {:class=>'form-control select2'}) %><center></td>
+              <td><center>
+              <% reservas_array = Reserva.all.map { |reserva| ["#{reserva.locatario.nombre } #{reserva.fecha_reserva } #{reserva.monto}", reserva.id] } %>
+              <%= f.select(:reserva_id, options_for_select(reservas_array), { prompt: true}, {:class=>'form-control  input-sm select2', placeholder: 'Locatario', id: 'locatario' }) %>
+
+              <center>
+              </td>
               <td><center><%= f.number_field :montoapagar, class:"form-control input-sm" %></center></td>
               <td><center><%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
                   <span class="glyphicon glyphicon-floppy-disk"></span>
