@@ -8,7 +8,7 @@
   <div class="CSS_Table_Example">
     <table>
       <tr>
-          <td>Nombre</td>
+          <td>Numero</td>
           <td>Tipo</td>
           <td>Descripcion</td>
           <td>Precio</td>
@@ -18,7 +18,7 @@
           <% @habitaciones.each do |habitacion| %>
           <tr>
             <td><center><%= habitacion.numero %></center></td>
-            <td><center><%= habitacion.tipo_id %></center></td>
+            <td><center><%= habitacion.tipo.nombre %></center></td>
             <td><center><%= habitacion.descripcion %></center></td>
             <td><center><%= habitacion.precio %></center></td>
             <td><center><%= habitacion.estado %></center></td>

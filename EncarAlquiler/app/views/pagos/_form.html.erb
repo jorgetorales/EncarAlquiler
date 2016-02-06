@@ -18,27 +18,22 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-8">
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <th class="info text-center"><%= f.label :reserva_id %></th>
-              <th class="info text-center"><%= f.label :montoapagar %></th>
-              <th class="info text-center">Acciones</th>
+      <div class="CSS_Table_Example">
+        <table >
+          <tr>
+              <td><%= f.label :reserva_id %></td>
+              <td><%= f.label :montoapagar %></td>
+              <td>Acciones</td>
             </tr>
-          </thead>
-          <tbody>
-            <tr class="text-center">
-              <td><%= f.collection_select(:reserva_id, Reserva.all, :id, :locatario_id, { prompt: true}, {:class=>'form-control select2'}) %></td>
-              <td><%= f.number_field :montoapagar, class:"form-control input-sm" %></td>
-              <td><%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
+            <tr>
+              <td><center><%= f.collection_select(:reserva_id, Reserva.all, :id, :locatario_id, { prompt: true}, {:class=>'form-control select2'}) %><center></td>
+              <td><center><%= f.number_field :montoapagar, class:"form-control input-sm" %></center></td>
+              <td><center><%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
                   <span class="glyphicon glyphicon-floppy-disk"></span>
                   <% end %>
                   <%= link_to glyph(:remove), @pago, class: 'btn btn-danger btn-sm' %>
-                  <%= link_to glyph(:arrow_left), pagos_path, class: 'btn btn-info btn-sm' %>
-              </td>
+              </center></td>
             </tr>
-          </tbody>
         </table>
       </div>
     </div>

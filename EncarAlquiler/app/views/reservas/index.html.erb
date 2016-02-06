@@ -18,7 +18,7 @@
   <tbody>
     <% @reservas.each do |reserva| %>
       <tr class="text-center">
-        <td><%= reserva.locatario_id %></td>
+        <td><%= reserva.locatario.nombre %></td>
         <td><%= reserva.fecha_reserva %></td>
         <td><%= reserva.monto %></td>
         <td><%= link_to glyph(:eye_open), reserva, class: 'btn btn-info btn-sm' %>
