@@ -1,9 +1,13 @@
-<h1 class="container text-center text-uppercase">
-  Habitacion
-  <th>
-    <%= link_to glyph(:plus), new_habitacion_path, class: 'btn btn-primary btn-sm' %>
-  </th>
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1 class="mycss">
+        Habitacion
+        <%= link_to glyph(:plus), new_habitacion_path, class: 'btn btn-primary btn-sm' %>
+      </h1>
+    </div>
+</div>
+</div>
 <div class="col-md-10 col-md-offset-1">
   <div class="CSS_Table_Example">
     <table>
@@ -23,7 +27,7 @@
           <td><center><%= @habitacion.precio %></center></td>
           <td><center>
             <%= link_to glyph(:pencil), edit_habitacion_path(@habitacion), class: 'btn btn-warning btn-sm' %>
-            <%= link_to glyph(:arrow_left), habitaciones_path, class: 'btn btn-info btn-sm' %>
+            <%= link_to glyph(:arrow_left), habitaciones_path, class: 'btn btn-default btn-sm' %>
           </center></td>
         </tr>
     </table>    

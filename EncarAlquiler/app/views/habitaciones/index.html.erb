@@ -1,13 +1,15 @@
-<div class="col-md-10 col-md-offset-1">
-    <h1 class="text-center text-uppercase">
-      Habitaciones
-          <%= link_to glyph(:plus), new_habitacion_path, class: 'btn btn-primary btn-sm' %>
-    </h1>
-</div>
-<div class="col-md-10 col-md-offset-1">
-  <div class="CSS_Table_Example">
-    <table>
-      <tr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1 class="mycss">
+        Habitaciones
+        <%= link_to glyph(:plus), new_habitacion_path, class: 'btn btn-primary btn-sm' %>
+      </h1>
+    </div>
+    <div class="col-md-10 col-md-offset-1">
+      <div class="CSS_Table_Example">
+      <table>
+        <tr>
           <td>Numero</td>
           <td>Tipo</td>
           <td>Descripcion</td>
@@ -29,6 +31,8 @@
             </center></td>
           </tr>
         <% end %>
-    </table>
+      </table>
+      </div>
+    </div>
   </div>
-  </div>
+</div>
