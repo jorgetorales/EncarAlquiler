@@ -1,11 +1,13 @@
 <div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-<h1 class="text-center text-uppercase">Nueva Reserva</h1>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<h1 class="mycss">
+			Nueva Reserva
+			<%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-primary btn-sm' %>
+			</h1>
+		</div>
+	</div>
 </div>
 <%= render 'form' %>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-<!--<%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-primary btn-sm' %>-->
-</div>
+
+
