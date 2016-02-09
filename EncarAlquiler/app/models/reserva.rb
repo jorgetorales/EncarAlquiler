@@ -3,7 +3,7 @@ class Reserva < ActiveRecord::Base
 	has_many :reservas_habitaciones
 	belongs_to :locatario
 	has_many :precios, through: :habitaciones
-	has_many :pagos
+	belongs_to :pago
 
 	accepts_nested_attributes_for :reservas_habitaciones, allow_destroy: true
 
