@@ -1,7 +1,13 @@
-<div class="container col-md-12">
-	<h1 class="text-center text-uppercase">
-		Nuevo Pago   
-		<%= link_to glyph(:arrow_left), pagos_path, class: 'btn btn-default btn-sm' %>
-	</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-8 col-md-offset-2">
+				<h1 class="mycss">
+					Nuevo Pago  
+					<%= link_to glyph(:arrow_left), pagos_path, class: 'btn btn-default btn-sm' %>
+			</div>
+		</div>
+	</div>
 </div>
 <%= render 'form' %>
+

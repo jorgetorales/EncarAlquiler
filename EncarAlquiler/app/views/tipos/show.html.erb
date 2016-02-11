@@ -1,29 +1,27 @@
-<h1 class="text-center text-uppercase container">
-	Tipos
-	<th>
-      <%= link_to glyph(:plus), new_tipo_path, class: 'btn btn-primary btn-sm' %>
-    </th>
-</h1>
-<div class="col-md-4 col-md-offset-4">
-	<div class=" CSS_Table_Example">
-	    <table>
-	        <tr>
-	          <td>
-	          	Nombre
-	          </td>
-	          <td>
-	          	Acciones
-	          </td>
-	        </tr>
-	          <tr>
-	            <td><center>
-	            	<%= @tipo.nombre %>
-	            </td></center>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="mycss">
+			Tipo
+      		<%= link_to glyph(:plus), new_tipo_path, class: 'btn btn-primary btn-sm' %>
+		</h1>
+		<div class=" CSS_Table_Example">
+	    	<table>
+	        	<tr>
+	          		<td>Nombre</td>
+	          		<td>Acciones</td>
+	        	</tr>
+	          	<tr>
+	            <td><center><%= @tipo.nombre %></td></center>
 	            <td><center>
 	            	<%= link_to glyph(:pencil), edit_tipo_path(@tipo), class: 'btn btn-warning btn-sm' %>
 					<%= link_to glyph(:arrow_left), tipos_path,  class: 'btn btn-default btn-sm' %>
-	            </center></td>
-	          </tr>
-	    </table>
+	            	</center></td>
+	          	</tr>
+	    	</table>
+		</div>
+	  </div>
 	</div>
+  </div>
 </div>

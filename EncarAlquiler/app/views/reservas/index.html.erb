@@ -1,32 +1,32 @@
-<div class="col-md-10 col-md-offset-1">
-    <h1 class="mycss">
-      Reservas realizadas
+<div class="container">
+  <div class"row">
+    <div class="col-md-12">
+      <h1 class="mycss">
+        Reservas realizadas
         <%= link_to glyph(:plus), new_reserva_path, class: 'btn btn-primary btn-sm' %>
-    </h1>
-</div>
-<div class="col-md-10 col-md-offset-1">
- <div class="CSS_Table_Example">
-    <table>
-      <tr>
-        <td>Locatario</td>
-        <td>Fecha de reserva</td>
-        <td>Monto</td>
-        <td>Estado</td>
-        <td>Acciones</td>
-      </tr>
-          
-    <% @reservas.each do |reserva| %>
-      <tr>
-        <td><center><%= reserva.locatario.nombre %></center></td>
-        <td><center><%= reserva.fecha_reserva %></center></td>
-        <td><center><%= reserva.monto %></center></td>
-        <td><center><%= reserva.estado %></center></td>
-        <td><center><%= link_to glyph(:eye_open), reserva, class: 'btn btn-info btn-sm' %>
-            <%= link_to glyph(:pencil), edit_reserva_path(reserva), class: 'btn btn-warning btn-sm' %>
-            <%= link_to glyph(:trash), reserva, method: :delete, data: { confirm: 'Estas seguro?' }, class: 'btn btn-danger btn-sm'  %></center></td>
-      </tr>
-    <% end %>
-    </table>
+      </h1>
+      <div class="CSS_Table_Example">
+        <table>
+          <tr>
+            <td>Locatario</td>
+            <td>Fecha de reserva</td>
+            <td>Monto</td>
+            <td>Estado</td>
+            <td>Acciones</td>
+          </tr><% @reservas.each do |reserva| %>
+          <tr>
+            <td><center><%= reserva.locatario.nombre %></center></td>
+            <td><center><%= reserva.fecha_reserva %></center></td>
+            <td><center><%= reserva.monto %></center></td>
+            <td><center><%= reserva.estado %></center></td>
+            <td><center><%= link_to glyph(:eye_open), reserva, class: 'btn btn-info btn-sm' %>
+              <%= link_to glyph(:pencil), edit_reserva_path(reserva), class: 'btn btn-warning btn-sm' %>
+              <%= link_to glyph(:trash), reserva, method: :delete, data: { confirm: 'Estas seguro?' }, class: 'btn btn-danger btn-sm'  %></center></td>
+          </tr>
+              <% end %>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 

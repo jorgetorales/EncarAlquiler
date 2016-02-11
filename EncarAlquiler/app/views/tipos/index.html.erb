@@ -1,13 +1,13 @@
 <div class="container">
-  <h1 class="text-center text-uppercase ">
-    Tipos
-    <th>
-      <%= link_to glyph(:plus), new_tipo_path, class: 'btn btn-primary btn-sm' %>
-    </th>
-  </h1>
-    <div class="col-md-6 col-md-offset-3">
-      <div class="CSS_Table_Example">
-        <table>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+     <div class="col-md-8 col-md-offset-2">
+      <h1 class="mycss">
+        Tipos
+        <%= link_to glyph(:plus), new_tipo_path, class: 'btn btn-primary btn-sm' %>
+      </h1>
+        <div class="CSS_Table_Example">
+          <table>
             <tr>
               <td>Nombre</td>
               <td>Acciones</td>
@@ -24,7 +24,8 @@
               </tr>
             <% end %>
           
-        </table>
-      </div>
+          </table>
+        </div>
     </div>
+  </div>
 </div>

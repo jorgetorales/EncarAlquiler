@@ -1,27 +1,30 @@
 <div class="container">
-  <h1 class="text-center text-uppercase">
-      Pagos
-      <%= link_to  glyph(:plus), new_pago_path, class: 'btn btn-primary btn-sm' %>
-  </h1>
-  <div class="col-md-6 col-md-offset-3">
-    <div class="CSS_Table_Example">
-      <table>
-        <tr>
-            <td>Reserva</td>
-            <td>Monto</td>
-            <td>Acciones</td>
-          </tr><% @pagos.each do |pago| %>
-          <tr>
-            <td><center><%= pago.reserva_id%></center></td>
-            <td><center><%= pago.montoapagar %></center></td>
-            <td><center>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+     <div class="col-md-8 col-md-offset-2">
+      <h1 class="mycss">
+        Pagos
+        <%= link_to  glyph(:plus), new_pago_path, class: 'btn btn-primary btn-sm' %>
+      </h1>
+        <div class="CSS_Table_Example">
+          <table>
+            <tr>
+              <td>Reserva</td>
+              <td>Monto</td>
+              <td>Acciones</td>
+            </tr><% @pagos.each do |pago| %>
+            <tr>
+              <td><center><%= pago.reserva_id%></center></td>
+              <td><center><%= pago.montoapagar %></center></td>
+              <td><center>
                 <%= link_to glyph(:eye_open), pago, class: 'btn btn-info btn-sm' %>
                 <%= link_to glyph(:pencil), edit_pago_path(pago), class: 'btn btn-warning btn-sm' %>
-                <%= link_to glyph(:trash), pago, method: :delete, data: { confirm: 'Estas seguro?' }, class: 'btn btn-danger btn-sm' %>
-            </center></td>
-          </tr>
-          <% end %>
-      </table>
+                <%= link_to glyph(:trash), pago, method: :delete, data: { confirm: 'Estas seguro?' }, class: 'btn btn-danger btn-sm' %></center></td>
+            </tr>
+                <% end %>
+          </table>
+        </div>
     </div>
+   </div>
   </div>
 </div>

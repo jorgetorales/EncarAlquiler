@@ -1,6 +1,13 @@
-<h1 class="text-center text-uppercase">Editar Reserva</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			
+				<h1 class="mycss">
+					Editar Reserva
+					<%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-primary btn-sm' %>
+				</h1>
+			
+		</div>
+	</div>
+</div>
 <%= render 'form' %>
-<!--
-<%= link_to glyph(:remove), @reserva, class: 'btn btn-default btn-sm'  %>
-<%= link_to glyph(:arrow_left), reservas_path, class: 'btn btn-primary btn-sm'  %>
--->

@@ -1,31 +1,33 @@
-<h1 class="text-center text-uppercase container">
-  Locatarios
-  <th>
-      <%= link_to  glyph(:plus), new_locatario_path, class: 'btn btn-primary btn-sm' %>
-  </th>
-</h1>
-<div class="col-md-10 col-md-offset-1">
-  <div class="CSS_Table_Example">
-    <table>
-              <tr>
-                <td>Nombre</td>
-                <td>Apellido</td>
-                <td>CI:</td>
-                <td>Telefono</td>
-                <td>Email</td>
-                <td>Acciones</td>
-              </tr>
-                <tr>
-                  <td><center><%= @locatario.nombre %></center></td>
-                  <td><center><%= @locatario.apellido %></center></td>
-                  <td><center><%= @locatario.ci %></center></td>
-                  <td><center><%= @locatario.telefono %></center></td>
-                  <td><center><%= @locatario.email %></center></td>
-                  <td><center>
-                    <%= link_to glyph(:pencil), edit_locatario_path(@locatario), class: 'btn btn-warning btn-sm' %>
-                    <%= link_to glyph(:arrow_left), locatarios_path,  class: 'btn btn-default btn-sm' %>
-                  </center></td>
-                </tr>
-    </table>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1 class="mycss">
+        Locatario
+        <%= link_to  glyph(:plus), new_locatario_path, class: 'btn btn-primary btn-sm' %>
+      </h1>
+    <div class="CSS_Table_Example">
+      <table>
+        <tr>
+          <td>Nombre</td>
+          <td>Apellido</td>
+          <td>CI:</td>
+          <td>Telefono</td>
+          <td>Email</td>
+          <td>Acciones</td>
+        </tr>
+        <tr>
+          <td><center><%= @locatario.nombre %></center></td>
+          <td><center><%= @locatario.apellido %></center></td>
+          <td><center><%= @locatario.ci %></center></td>
+          <td><center><%= @locatario.telefono %></center></td>
+          <td><center><%= @locatario.email %></center></td>
+          <td><center>
+            <%= link_to glyph(:pencil), edit_locatario_path(@locatario), class: 'btn btn-warning btn-sm' %>
+            <%= link_to glyph(:arrow_left), locatarios_path,  class: 'btn btn-default btn-sm' %>
+            </center></td>
+        </tr>
+      </table>
+    </div>
+   </div>
   </div>
 </div>

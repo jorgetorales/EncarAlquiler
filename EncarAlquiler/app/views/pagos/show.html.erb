@@ -1,23 +1,29 @@
-<h1 class="container text-center text-uppercase">
-  Pago
-    <%= link_to  glyph(:plus), new_pago_path, class: 'btn btn-primary btn-sm' %>
-</h1>
-<div class="col-md-6 col-md-offset-3">
-  <div class="CSS_Table_Example">
-    <table>
-        <tr>
-  			<td>Reserva</td>
-  			<td>Montoapagar:</td>
-  			<td>Acciones</td>       
-        </tr>
-        <tr>
-        	<td><center><%= @pago.reserva_id %></center></td>
-        	<td><center><%= @pago.montoapagar %></center></td>
-        	<td><center>
-              <%= link_to glyph(:pencil), edit_pago_path(@pago), class: 'btn btn-warning btn-sm' %>
-              <%= link_to glyph(:arrow_left), pagos_path,  class: 'btn btn-default btn-sm' %>
-          </center></td>
-        </tr>
-    </table>    
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="mycss">
+          Pago
+          <%= link_to  glyph(:plus), new_pago_path, class: 'btn btn-primary btn-sm' %>
+        </h1>
+        <div class="CSS_Table_Example">
+          <table>
+            <tr>
+  			      <td>Reserva</td>
+  			      <td>Montoapagar:</td>
+  			      <td>Acciones</td>       
+            </tr>
+            <tr>
+        	    <td><center><%= @pago.reserva_id %></center></td>
+        	    <td><center><%= @pago.montoapagar %></center></td>
+        	    <td><center>
+                <%= link_to glyph(:pencil), edit_pago_path(@pago), class: 'btn btn-warning btn-sm' %>
+                <%= link_to glyph(:arrow_left), pagos_path,  class: 'btn btn-default btn-sm' %>
+                </center></td>
+            </tr>
+          </table>    
+        </div>
+      </div>
+    </div>
   </div>
 </div>
